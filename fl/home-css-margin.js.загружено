@@ -1,0 +1,8 @@
+//frontpage essential grid correction, after page load
+jQuery(document).ready(function( $ ) {
+	
+$(window).load(function() {
+  $('body').addClass('home-left-margin');
+});
+	
+});

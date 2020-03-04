@@ -1,0 +1,126 @@
+/*
+Theme Name: 	Betheme Child
+Theme URI: 		http://themes.muffingroup.com/betheme
+Author: 		Muffin group
+Author URI: 	http://muffingroup.com
+Description:	Child Theme for Betheme - Premium WordPress Theme
+Template:		betheme
+Version: 		1.6.1.1
+*/
+
+/* Theme customization starts here
+-------------------------------------------------------------- */
+
+/*breadcrumb issue*/
+.category-14 #Subheader ul.breadcrumbs li:nth-of-type(2),
+.category-15 #Subheader ul.breadcrumbs li:nth-of-type(2),
+.category-16 #Subheader ul.breadcrumbs li:nth-of-type(2),
+.post-template-default #Subheader ul.breadcrumbs li:nth-of-type(2)
+{
+    display: none;
+}
+
+
+/*footer btn*/
+/*
+.medicover-bejelentkezes .su-button i {
+    display: block;
+    width: 1em;
+    height: 1em;
+    margin: 0 auto !important;
+    text-align: center;
+    line-height: 1em;
+}
+.medicover-bejelentkezes .su-button-style-flat span {
+    padding: 40px 40px !important;
+}
+*/
+
+/*animate css*/
+/*
+.animacio {
+  animation-duration: 4s !important;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+.animacio2 {
+  animation-duration: 4s !important;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+}
+*/
+
+.animacio3 {
+  animation-duration: 2s !important;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+.animacio31 {
+  animation-duration: 2s !important;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+}
+
+/**/
+
+
+
+.animacio4:hover {
+     -webkit-animation-name: none; 
+    animation-name: none; 
+
+}
+
+.animacio4 {
+     -webkit-animation-name: spinner; 
+    -webkit-animation-timing-function: linear; 
+    -webkit-animation-iteration-count: infinite; 
+    -webkit-animation-duration: 4s; 
+    animation-name: spinner; 
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite; 
+    animation-duration: 4s; 
+    -webkit-transform-style: preserve-3d; 
+    -moz-transform-style: preserve-3d; 
+    -ms-transform-style: preserve-3d; 
+    transform-style: preserve-3d;
+}
+
+  /* WebKit and Opera browsers */ @-webkit-keyframes spinner { 
+    from 
+    { 
+        -webkit-transform: rotateY(0deg); 
+    } 
+    to { 
+        -webkit-transform: rotateY(-360deg); 
+    } 
+} /* all other browsers */ 
+@keyframes spinner { 
+    from { 
+        -moz-transform: rotateY(0deg); 
+        -ms-transform: rotateY(0deg); 
+        transform: rotateY(0deg); 
+    } 
+    to 
+    { 
+        -moz-transform: rotateY(-360deg); 
+        -ms-transform: rotateY(-360deg); 
+        transform: rotateY(-360deg); 
+    
+    } 
+}
+
+@media only screen and (min-width: 1240px) and (max-width: 1440px) {
+  #Content .section_wrapper,
+  #Subheader .container {
+    max-width: 1120px !important;
+  }
+}
+
+@media only screen and (min-width: 1441px) {
+  #Content .section_wrapper,
+  #Subheader .container {
+    max-width: 1340px !important;
+  }
+}
