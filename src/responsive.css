@@ -1,0 +1,724 @@
+@media only screen and (max-width: 996px) and (min-width: 860px){
+
+    
+
+    /********* main_content *********/
+    .container{
+        width: 843px;
+    }
+
+    /********* screen_1 *********/
+    .header {
+        font-size: 34px;
+    }
+    .title {
+        padding: 20px 0 0 0;
+        height: 60px;
+        background-size: contain;
+    }
+    .title h1 {
+        font-size: 33px;
+    }
+    .screen_1 > .container > img {
+        position: absolute;
+        right: 0px;
+        bottom: -56px;
+        height: 501px;
+    }
+    .news {
+        top: -43px;
+    }
+
+    /********* screen_2 *********/
+    .autumn {
+        width: 525px;
+        margin: 30px 0 0 0;
+        font-size: 21px;
+    }
+
+    /********* screen_3 *********/
+    .galery_1 img,
+    .galery_2 img,
+    .galery_3 img,
+    .galery_4 img,
+    .galery_5 img{
+        height: 217px;
+        float: none;
+        display: inline-block;
+        margin: 0;
+    }
+    .fisherman {
+        left: -180px;
+        top: -76px;
+        height: 600px !important;
+    }
+    .galery_2 img{
+        height: 285px;
+    }
+    .galery_3{
+        width: 735px;
+    }
+    .galery_3 img{
+        height: 170px;
+    }
+    .galery_3 .right,
+    .galery_5 .right{
+        float: none !important;
+    }
+    .galery_4 img{
+        height: 218px;
+    }
+    .galery_5 img{
+        height: 190px;
+    }
+
+    /********* screen_4 *********/
+    .certificate > div {
+        margin: 0 25px 0 25px;
+    }
+
+    /********* screen_5 *********/
+    .screen_5 .container > img {
+        top: 76px;
+        left: -160px;
+        height: 580px;
+    }
+    .important > div img {
+        top: 80px;
+    }
+
+    /********* screen_6 *********/
+    .guarantee {
+        background-size: contain;
+        height: 214px;
+        font-size: 21px;
+        padding: 8px 0 0 0;
+    }
+    .guarantee p {
+        margin: 0 0 12px 0;
+    }
+    .guarantee span {
+        padding: 0 100px 0 100px;
+    }
+    .blocks > div {
+        width: 240px;
+    }
+    .two {
+        margin: 0 46px 0 46px;
+    }
+    .review {
+        width: 393px;
+        margin: 0 50px 60px 0;
+    }
+    .text {
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 859px) and (min-width: 640px){
+
+    /********* main_content *********/
+    .container{
+        width: 623px;
+    }
+
+    /********* screen_1 *********/
+    .header {
+        font-size: 25px;
+    }
+    .title {
+        padding: 25px 0 0 0;
+        height: 55px;
+        background-size: contain;
+    }
+    .title h1 {
+        font-size: 24px;
+    }
+    .screen_1 > .container > img {
+        position: absolute;
+        right: 0px;
+        bottom: -56px;
+        height: 300px;
+    }
+    .news {
+        top: -51px;
+    }
+
+    /********* screen_2 *********/
+    .screen_2 .container > img{
+        height: 333px;
+    }
+    .autumn {
+        width: 390px;
+        margin: -10px 0 0 0;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    /********* screen_3 *********/
+    .galery_1 img,
+    .galery_2 img,
+    .galery_3 img,
+    .galery_4 img,
+    .galery_5 img{
+        height: 181px;
+        float: none;
+        display: inline-block;
+        margin: 0;
+    }
+    .fisherman {
+        display: none;
+    }
+    .galery_2 img{
+        height: 179px;
+    }
+    .galery_3{
+        width: 100%;
+    }
+    .galery_3 img{
+        height: 145px;
+    }
+    .galery_3 .right,
+    .galery_5 .right{
+        float: none !important;
+    }
+    .galery_4 img{
+        height: 210px;
+    }
+    .galery_5 img{
+        height: 160px;
+    }
+
+    .doctor{
+        width: auto;
+        border: 4px solid #d8d8d8;
+        font-size: 16px;
+    }
+    .doctor:before,
+    .doctor:after{
+        display: none;
+    }
+    .doctor p {
+        width: auto;
+        background-size: contain;
+    }
+    .foto span{
+        width: 430px;
+    }
+
+    /********* screen_4 *********/
+    .certificate > div {
+        margin: 0;
+        background-size: contain;
+        width: 300px;
+    }
+    .certificate > div img {
+        margin: 127px 0 0 0px;
+        height: 330px;
+    }
+    .more_fish{
+        max-width: 95%;
+        width: auto;
+        height: auto;
+    }
+
+    /********* screen_5 *********/
+    .screen_5 .container > img,
+    .important > div img{
+        display: none;
+    }
+    .important{
+        float: none;
+        margin: 0 auto;
+        padding: 44px 0 0 0;
+    }
+    .important > div {
+        margin: 0 0 33px 0;
+    }
+
+    /********* screen_6 *********/
+    .guarantee {
+        background-size: contain;
+        height: 152px;
+        font-size: 16px;
+        padding: 12px 0 0 0;
+    }
+    .guarantee p {
+        margin: 0 0 12px 0;
+    }
+    .guarantee span {
+        padding: 0 50px 0 50px;
+        font-size: 15px;
+    }
+    .blocks > div {
+        width: 186px;
+    }
+    .two {
+        margin: 0 20px 0 20px;
+    }
+    .review {
+        width: 300px;
+        margin: 0 3px 60px 3px;
+    }
+    .text {
+        width: 260px;
+    }
+
+    /********* screen_7 *********/
+    .screen_7{
+        height: 788px;
+        padding: 60px 0 0 0;
+    }
+    .forma {
+
+        float: none;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 639px) and (min-width: 480px){
+
+    /********* main_content *********/
+    .container{
+        width: 463px;
+    }
+
+    /********* screen_1 *********/
+    .header {
+        font-size: 19px;
+        padding: 41px 0 0 0;
+        height: 145px;
+        line-height: 33px;
+    }
+    .title {
+        padding: 12px 0 0 0;
+        height: 68px;
+        background-size: cover;
+    }
+    .title h1 {
+        font-size: 25px;
+    }
+    .screen_1 > .container > img {
+        display: none;
+    }
+    .news {
+        top: -36px;
+    }
+    .button{
+        margin: 29px auto 0 auto;
+    }
+
+    /********* screen_2 *********/
+    .screen_2 .container > img{
+        height: 280px;
+    }
+    .autumn {
+        width: 260px;
+        margin: -10px 0 0 0;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    /********* screen_3 *********/
+    .screen_3 h1,
+    .screen_4 h1,
+    .screen_6 h1{
+        font-size: 26px;
+    }
+    .galery_1 img,
+    .galery_2 img,
+    .galery_3 img,
+    .galery_4 img,
+    .galery_5 img{
+        height: 132px;
+        float: none;
+        display: inline-block;
+        margin: 0;
+    }
+    .fisherman {
+        display: none;
+    }
+    .galery_2 img{
+        height: 130px;
+    }
+    .galery_3{
+        width: 100%;
+    }
+    .galery_3 img{
+        height: 156px;
+    }
+    .galery_3 .right,
+    .galery_5 .right{
+        float: none !important;
+    }
+    .galery_4 img{
+        height: 156px;
+    }
+    .galery_5 img{
+        height: 118px;
+    }
+
+    .doctor{
+        width: auto;
+        border: 4px solid #d8d8d8;
+        font-size: 19px;
+        margin: 40px auto 59px auto;
+    }
+    .doctor:before,
+    .doctor:after{
+        display: none;
+    }
+    .doctor p {
+        width: auto;
+        background-size: cover;
+        height: auto;
+        padding: 10px;
+        line-height: 23px;
+    }
+    .foto span{
+        width: 300px;
+    }
+    .foto img {
+        margin: 0 26px 0 7px;
+    }
+
+    /********* screen_4 *********/
+    .certificate > div {
+        margin: -41px 0 0 0;
+        margin: 0;
+        background-size: contain;
+        width: 300px;
+    }
+    .certificate > div img {
+        margin: 127px 0 0 0px;
+        height: 330px;
+    }
+    .more_fish{
+        max-width: 95%;
+        width: auto;
+        height: auto;
+    }
+
+    /********* screen_5 *********/
+    .screen_5 .container > img,
+    .important > div img{
+        display: none;
+    }
+    .important{
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+        padding: 44px 0 0 0;
+    }
+    .important > div {
+        padding: 20px 32px 21px 32px;
+        margin: 0 0 33px 0;
+    }
+
+    /********* screen_6 *********/
+    .guarantee {
+        height: 210px;
+        font-size: 20px;
+        padding: 12px 0 0 0;
+        background: none;
+    }
+    .guarantee p {
+        margin: 0 0 12px 0;
+    }
+    .guarantee span {
+        padding: 0 50px 0 50px;
+        font-size: 17px;
+    }
+    .blocks > div {
+        width: 200px;
+    }
+    .two {
+        margin: 0 20px 0 20px;
+    }
+    .review {
+        width: 456px;
+        margin: 0 3px 60px 3px;
+    }
+    .text {
+        width: 414px;
+    }
+
+    /********* screen_7 *********/
+    .screen_7{
+        padding: 60px 0 0 0;
+        height: 788px;
+    }
+    .forma {
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+    }
+    .form_title {
+        height: 83px;
+        font-size: 19px;
+        padding: 13px 22px 0 22px;
+    }
+    .forma form {
+        width: 100%;
+    }
+    .forma form ul li span {
+        margin: 0 10px 0 0px;
+    }
+
+    /********* footer *********/
+    .footer {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (max-width: 479px) and (min-width: 320px){
+
+    .reviews-mob{
+        display: block !important;
+    }
+
+    .reviews{
+        display: none;
+    }
+
+    /********* main_content *********/
+    .container{
+        width: 303px;
+    }
+
+    /********* screen_1 *********/
+    .screen_1 {
+        height: auto;
+        background-size: 100% 100%;
+        padding: 0 0 35px 0;
+    }
+    .header {
+        font-size: 20px;
+        padding: 26px 0 0 0;
+        height: 160px;
+        line-height: 26px;
+    }
+    br{
+        display: none !important;
+    }
+    .title {
+        padding: 12px 0 0 0;
+        height: 68px;
+        background-size: cover;
+    }
+    .title h1 {
+        font-size: 21px;
+    }
+    .screen_1 > .container > img {
+        display: none;
+    }
+    .screen_1 > .container h2 {
+        text-align: left;
+        font-size: 24px;
+    }
+    .screen_1 > .container ul {
+        text-align: left;
+    }
+    .screen_1 > .container ul li p{
+        font-size: 20px;
+        width: 195px;
+    }
+    .bg {
+        padding: 10px 0 0 20px;
+        height: 108px;
+        line-height: 22px !important;
+    }
+    .news {
+        top: -36px;
+    }
+    .button{
+        margin: 29px auto 0 auto;
+        width: 288px;
+    }
+
+    /********* screen_2 *********/
+    .screen_2 .container > img{
+        height: auto;
+        width: 100%;
+    }
+    .autumn {
+        width: auto;
+        margin: -10px 0 0 0;
+        font-size: 18px;
+        line-height: 23px;
+        padding: 0 10px 0 10px;
+    }
+
+    /********* screen_3 *********/
+    .screen_3 h1,
+    .screen_4 h1,
+    .screen_6 h1{
+        font-size: 17px;
+    }
+    .galery_1 img,
+    .galery_2 img,
+    .galery_3 img,
+    .galery_4 img,
+    .galery_5 img{
+        height: auto;
+        float: none;
+        display: inline-block;
+        margin: 0;
+        width: auto;
+        max-width: 100%;
+    }
+    .fisherman {
+        display: none;
+    }
+
+    .galery_3{
+        width: 100%;
+    }
+    .galery_3 .right,
+    .galery_5 .right{
+        float: none !important;
+    }
+    .doctor{
+        width: auto;
+        border: 4px solid #d8d8d8;
+        font-size: 19px;
+        margin: 40px auto 30px auto;
+    }
+    .doctor:before,
+    .doctor:after{
+        display: none;
+    }
+    .doctor p {
+        width: auto;
+        background-size: cover;
+        height: auto;
+        padding: 10px;
+        line-height: 23px;
+    }
+    .foto span{
+        width: 280px;
+        margin: 10px 0 0 11px;
+    }
+    .foto img {
+        margin: 0 26px 0 7px;
+    }
+
+    /********* screen_4 *********/
+    .certificate > div {
+        margin: -41px 0 0 0;
+        margin: 0;
+        background-size: contain;
+        width: 300px;
+    }
+    .certificate > div img {
+        margin: 127px 0 0 0px;
+        height: 330px;
+    }
+    .more_fish{
+        max-width: 95%;
+        width: auto;
+        height: auto;
+    }
+    .in_package {
+        width: auto;
+        padding: 14px 0 15px 10px;
+        height: auto;
+        background-size: cover;
+    }
+    /********* screen_5 *********/
+    .screen_5 {
+        height: auto;
+        background-size: cover;
+    }
+    .screen_5 .container > img,
+    .important > div img{
+        display: none;
+    }
+    .important{
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+        padding: 44px 0 0 0;
+    }
+    .important > div {
+        padding: 20px 32px 21px 32px;
+        margin: 0 0 33px 0;
+    }
+
+    /********* screen_6 *********/
+    .guarantee {
+        height: 225px;
+        font-size: 18px;
+        padding: 12px 0 0 0;
+        background: none;
+    }
+    .guarantee p {
+        margin: 0 0 12px 0;
+    }
+    .guarantee span {
+        padding: 0 10px 0 10px;
+        font-size: 15px;
+    }
+    .blocks > div {
+        width: 95%;
+    }
+    .two {
+        margin: 20px 0 20px 0;
+    }
+    .review {
+        width: 300px;
+        margin: 0 0px 60px 3px;
+    }
+    .text {
+        width: 254px;
+    }
+    .name p{
+        width: 170px;
+    }
+
+    /********* screen_7 *********/
+    .screen_7{
+        padding: 60px 0 0 0;
+        height: 788px;
+    }
+    .forma {
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+    }
+    .form_title {
+        height: auto;
+        font-size: 19px;
+        padding: 12px 22px 12px 22px;
+        background-size: cover;
+    }
+    .forma form {
+        width: 100%;
+    }
+    .forma form ul li span {
+        margin: 0 10px 0 0px;
+    }
+    .forma form ul li p {
+        width: 240px;
+    }
+	.forma select {
+        width: 289px;
+        background:  #f6f6f6;
+        padding: 0 0 0 65px;
+    }
+    .forma input[type=text] {
+        width: 220px;
+        background: url("icon_1.png") 16px center no-repeat, #f6f6f6;
+        padding: 0 0 0 65px;
+    }
+    .forma input[name=phone] {
+        background: url("icon_2.png") 16px center no-repeat, #f6f6f6;
+    }
+    .forma .button {
+        width: 286px;
+    }
+    /********* footer *********/
+    .footer {
+        font-size: 19px;
+    }
+}
