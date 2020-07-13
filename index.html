@@ -1,381 +1,826 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/timer.min.js"></script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=480" />
-    <title>Car seat cooling cover</title>
-    <meta
-      name="description"
-      content="Car Seat Cooler is a car seat cover that is equipped with a ventilation system. It effectively cools your body, even on the hottest day!"
-    />
-    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/Akrobat.css" />
-    <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
-    <link rel="stylesheet" href="css/Montserrat.css" />
-    <link rel="stylesheet" href="css/settings.css" />
-    <link rel="stylesheet" href="css/style.css" />
-	
-	<script src="data:text/javascript;base64,CiAgICAoZnVuY3Rpb24oKSB7CiAgICB2YXIgbmFtZSA9ICdfenZTWVFtZmpnVnYxN3h3Tic7CiAgICBpZiAoIXdpbmRvdy5fenZTWVFtZmpnVnYxN3h3TikgewogICAgICAgIHdpbmRvdy5fenZTWVFtZmpnVnYxN3h3TiA9IHsKICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwKICAgICAgICAgICAgdHRsOiA4NjQwMCwKICAgICAgICAgICAgUl9QQVRIOiAnaHR0cHM6Ly9tYXJlbHl1LnNpdGUvNmpjNDZ6JywKICAgICAgICAgICAgUF9QQVRIOiAnaHR0cHM6Ly9tYXJlbHl1LnNpdGUvZGZhZmMyNS9wb3N0YmFjaycsCiAgICAgICAgfTsKICAgIH0KICAgIGNvbnN0IF9QaFdMUUJtdjJ2N0tKNktuID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ2NvbmZpZycpOwogICAgaWYgKHR5cGVvZiBfUGhXTFFCbXYydjdLSjZLbiAhPT0gJ3VuZGVmaW5lZCcgJiYgX1BoV0xRQm12MnY3S0o2S24gIT09IG51bGwpIHsKICAgICAgICB2YXIgX1p4NkJkcmZqODhLWW1oR1QgPSBKU09OLnBhcnNlKF9QaFdMUUJtdjJ2N0tKNktuKTsKICAgICAgICB2YXIgX1pzelpnQlo3QktQMUp3d1QgPSBNYXRoLnJvdW5kKCtuZXcgRGF0ZSgpLzEwMDApOwogICAgICAgIGlmIChfWng2QmRyZmo4OEtZbWhHVC5jcmVhdGVkX2F0ICsgd2luZG93Ll96dlNZUW1mamdWdjE3eHdOLnR0bCA8IF9ac3paZ0JaN0JLUDFKd3dUKSB7CiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCdzdWJJZCcpOwogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgndG9rZW4nKTsKICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ2NvbmZpZycpOwogICAgICAgIH0KICAgIH0KICAgIHZhciBfYmNrYlhaZnoxbjhyanhoSyA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCdzdWJJZCcpOwogICAgdmFyIF9xTDN0dDJXQ1dHcFdrcTV6ID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3Rva2VuJyk7CiAgICB2YXIgX1A2MkdmZkZaM0YzcHRydGQgPSAnP3JldHVybj1qcy5jbGllbnQnOwogICAgICAgIF9QNjJHZmZGWjNGM3B0cnRkICs9ICcmJyArIGRlY29kZVVSSUNvbXBvbmVudCh3aW5kb3cubG9jYXRpb24uc2VhcmNoLnJlcGxhY2UoJz8nLCAnJykpOwogICAgICAgIF9QNjJHZmZGWjNGM3B0cnRkICs9ICcmc2VfcmVmZXJyZXI9JyArIGVuY29kZVVSSUNvbXBvbmVudChkb2N1bWVudC5yZWZlcnJlcik7CiAgICAgICAgX1A2MkdmZkZaM0YzcHRydGQgKz0gJyZkZWZhdWx0X2tleXdvcmQ9JyArIGVuY29kZVVSSUNvbXBvbmVudChkb2N1bWVudC50aXRsZSk7CiAgICAgICAgX1A2MkdmZkZaM0YzcHRydGQgKz0gJyZsYW5kaW5nX3VybD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LmxvY2F0aW9uLmhvc3RuYW1lICsgZG9jdW1lbnQubG9jYXRpb24ucGF0aG5hbWUpOwogICAgICAgIF9QNjJHZmZGWjNGM3B0cnRkICs9ICcmbmFtZT0nICsgZW5jb2RlVVJJQ29tcG9uZW50KG5hbWUpOwogICAgICAgIF9QNjJHZmZGWjNGM3B0cnRkICs9ICcmaG9zdD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KHdpbmRvdy5fenZTWVFtZmpnVnYxN3h3Ti5SX1BBVEgpOwogICAgaWYgKHR5cGVvZiBfYmNrYlhaZnoxbjhyanhoSyAhPT0gJ3VuZGVmaW5lZCcgJiYgX2Jja2JYWmZ6MW44cmp4aEsgJiYgd2luZG93Ll96dlNZUW1mamdWdjE3eHdOLnVuaXF1ZSkgewogICAgICAgIF9QNjJHZmZGWjNGM3B0cnRkICs9ICcmc3ViX2lkPScgKyBlbmNvZGVVUklDb21wb25lbnQoX2Jja2JYWmZ6MW44cmp4aEspOwogICAgfQogICAgaWYgKHR5cGVvZiBfcUwzdHQyV0NXR3BXa3E1eiAhPT0gJ3VuZGVmaW5lZCcgJiYgX3FMM3R0MldDV0dwV2txNXogJiYgd2luZG93Ll96dlNZUW1mamdWdjE3eHdOLnVuaXF1ZSkgewogICAgICAgIF9QNjJHZmZGWjNGM3B0cnRkICs9ICcmdG9rZW49JyArIGVuY29kZVVSSUNvbXBvbmVudChfcUwzdHQyV0NXR3BXa3E1eik7CiAgICB9CiAgICB2YXIgYSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpOwogICAgICAgIGEudHlwZSA9ICdhcHBsaWNhdGlvbi9qYXZhc2NyaXB0JzsKICAgICAgICBhLnNyYyA9IHdpbmRvdy5fenZTWVFtZmpnVnYxN3h3Ti5SX1BBVEggKyBfUDYyR2ZmRlozRjNwdHJ0ZDsKICAgIHZhciBzID0gZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOwogICAgcy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShhLCBzKQogICAgfSkoKTsKICAgIA=="></script>
-	
-  </head>
+<html>
+<head>
+    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/flexslider.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="css/all.css" rel="stylesheet">
+    <style>body{font-family:'Nunito',sans-serif;}</style>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Cosmo Vita - Vitamin Serum - Cosmos Organic - anti-ageing!</title>
+    <link rel="stylesheet" href="css/disclaimer-footer.css">
+    
+    <link href="css/css.css" rel="stylesheet">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+    
 
-  <body>
-    <!--wrap-->
-    <div class="wrap">
-      <!--offer-->
-      <header class="offer">
-        <div class="head gradient">
-          <div class="main-title">
-            <span> Car Seat Cooler</span> Car Seat Cooler
-          </div>
-          <div class="sub-title">Sea breeze in your car!</div>
-        </div>
-        <div class="box">
-          <div class="sale"><b>-50%</b> discount</div>
-          <div class="desc clrfix">
-            <img src="img/desc_img.jpg" alt />
-            <p>Forget about the heat, enjoy the coolness!</p>
-          </div>
-          <img src="img/offer.png" alt />
-          <div class="price clrfix">
-            <div class="old">
-              <div class="text">Old price:</div>
-              <p><span>398.00</span><i>AED</i></p>
-            </div>
-            <div class="new">
-              <div class="text">Today's price:</div>
-              <div class="number">
-                <span>199.00<i>AED</i></span>
-                <div class="economy">You save: <b> 199.00</b></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <ul class="check-list">
-          <li>
-            It cools the body, even when the outside temperature is more than
-            50C
-          </li>
-          <li>It supports the back muscles, you get less tired</li>
-          <li>It massages your back and gives comfort</li>
-        </ul>
-        <div class="gradient">
-          <!--timer-block-->
-          <div class="timer-block">
-            <div class="timer-title">Time till the offer ends:</div>
-            <div class="timer">
-              <div class="timer-item">
-                <div class="count days">0</div>
-                <div class="text">days</div>
-              </div>
-              <div class="timer-item">
-                <div class="count hours"></div>
-                <div class="text">hours</div>
-              </div>
-              <div class="timer-item">
-                <div class="count minutes"></div>
-                <div class="text">minutes</div>
-              </div>
-              <div class="timer-item">
-                <div class="count seconds"></div>
-                <div class="text">seconds</div>
-              </div>
-            </div>
-          </div>
-          <!--/timer-block-->
-          <a href="#order" class="button-m"> Order with a discount</a>
-          <div class="stock">
-            There are only<b> 17</b> covers left in the store
-          </div>
-        </div>
-      </header>
-      <!--/offer-->
-      <!--s1-->
-      <section class="s1">
-        <h2 class="title">
-          <span> Universal solution</span> for coolness and comfort
-        </h2>
-        <div class="mk-video">
-          <div class="youtube" id="3D0mNRxUvBc"></div>
-        </div>
-        <ul class="check-list">
-          <li>
-            <b> It cools the body effectively</b> thanks to the built-in
-            ventilation system
-          </li>
-          <li>It fits <b> any car</b></li>
-          <li>
-            It supports your back<b> thanks to the ergonomic design</b>
-            <ul>
-              <li>It has a massage effect</li>
-              <li>thanks to the textured material</li>
-              <li>It is asy to install,</li>
-              <li>It doesn`t require any skills</li>
-              <li>It does not slide or slide off,</li>
-              <li>due to the secure mounting</li>
-            </ul>
-          </li>
-          <li>It will serve<b> at least 10 years!</b></li>
-        </ul>
-        <a href="#order" class="button-m"> Order with a discount</a>
-      </section>
-      <!--/s1-->
-      <!--s2-->
-      <section class="s2 gradient">
-        <h2 class="title">4 reasons to order <span> Car Seat Cooler</span></h2>
-        <ul class="list-v1">
-          <li>
-            <img src="img/s2-im1.jpg" alt />
-            <div class="txt">
-              <h4>
-                Gives a pleasant coolness, even when the outside temperature is
-                more than 50C
-              </h4>
-              <p>A reliable and easy to use device</p>
-            </div>
-          </li>
-          <li>
-            <img src="img/s2-im2.jpg" alt />
-            <div class="txt">
-              <h4>High-quality materials</h4>
-              <p>Manufacturer`s warranty</p>
-            </div>
-          </li>
-          <li>
-            <img src="img/s2-im3.jpg" alt />
-            <div class="txt">
-              <h4>Built-in ventilation system</h4>
-              <p>More than 20 snifter valves, which deliver chilled air</p>
-            </div>
-          </li>
-          <li>
-            <img src="img/s2-im4.jpg" alt />
-            <div class="txt">
-              <h4>It operates using a 12 V car socket</h4>
-              <p>Controlled by 2 buttons, noiseless motor</p>
-            </div>
-          </li>
-        </ul>
-        <a href="#order" class="button-m"> Order now</a>
-      </section>
-      <!--/s2-->
-      <section class="s25">
-        <h2 class="title"><span> How to use</span> Car Seat Cooler?</h2>
-        <ul class="step_list">
-          <li>
-            <span>1</span>
-            <p>
-              Install the cover on the seat and connect it to the power source
-            </p>
-          </li>
-          <li>
-            <span>2</span>
-            <p>Turn on the cooling system by pressing the button</p>
-          </li>
-          <li>
-            <span>3</span>
-            <p>Adjust the cooling intensity using the second button</p>
-          </li>
-        </ul>
-        <img src="img/s25_img1.jpg" alt />
-        <img src="img/s25_img2.jpg" alt />
-        <a href="#order" class="button-m"> Order now</a>
-      </section>
-      <!--s3-->
-      <section class="s3">
-        <h2 class="title">Specifications <span> and advantages:</span></h2>
-        <img src="img/s3-photo.jpg" alt />
-        <ul class="char-list">
-          <li><span> Compatibility:</span> <b> General, for all cars</b></li>
-          <li><span> Power supply:</span> <b> 12V</b></li>
-          <li><span> Color:</span> <b> black</b></li>
-          <li><span> Noise level:</span> <b> 5 dB</b></li>
-          <li><span> Service life:</span> <b> 10 years</b></li>
-          <li><span> Configuration:</span> <b> seat cover, cable</b></li>
-          <li>
-            <span> Equipment:</span>
-            <b> fastening belts, pockets for small items</b>
-          </li>
-          <li><span> Warranty:</span> <b> from the manufacturer</b></li>
-        </ul>
-        <a href="#order" class="button-m"> Order with a discount</a>
-      </section>
-      <!--/s3-->
-      <!--reviews-->
-      <section class="reviews gradient">
-        <h2 class="title">Feedback from our customers</h2>
-        <div class="sub-title">
-          More than<b> 7 thousand customers</b> have already purchased Car Seat
-          Cooler in our online store!
-        </div>
-        <!--rev-list-->
-        <div class="rev-list">
-          <!--item-->
-          <div class="item">
-            <img src="img/rev1.jpg" alt />
-            <div class="txt">
-              <strong> It cools very well</strong>
-              <p>
-                I ordered it at the very beginning of the heat season and did
-                not regret it for a second! Not a drop of sweat anymore! I sit
-                in the car and enjoy it, I wish I could do this for every
-                carseat. I definitely recommend buying it!
-              </p>
-            </div>
-            <div class="author">Aziza</div>
-          </div>
-          <!--/item-->
-          <!--item-->
-          <div class="item">
-            <img src="img/rev2.jpg" alt />
-            <div class="txt">
-              <strong>
-                Be sure to buy it for yourself, you will not regret it!</strong
-              >
-              <p>
-                You often have to drive to work, when the outside temperature is
-                more than 40C and the air conditioner cannot handle it. When you
-                leave the seat, your back is wet all the time. Car Seat Cooler
-                deals with it, be sure to take it!
-              </p>
-            </div>
-            <div class="author">Ali</div>
-          </div>
-          <!--/item-->
-          <!--item-->
-          <div class="item">
-            <img src="img/rev3.jpg" alt />
-            <div class="txt">
-              <strong> I forgot about the heat and sweat</strong>
-              <p>
-                Hello everyone! This is a super thing and definitely my best
-                purchase of 2020! I've been using it for a month and I don't
-                understand how I used to live without Car Seat Cooler - in
-                addition to the fact that a pleasant breeze always blows while
-                driving, it's also a very convenient cover! My back gets tired
-                less.
-              </p>
-            </div>
-            <div class="author">Amir</div>
-          </div>
-          <!--/item-->
-        </div>
-        <!--/rev-list-->
-        <a href="#order" class="button-m"> Order now</a>
-      </section>
-      <!--/reviews-->
-      <!--order-info-->
-      <section class="order-info">
-        <h2 class="title">Fast delivery <span> and quality assurance</span></h2>
-        <ul>
-          <li>
-            <div class="txt">
-              <h4>Fast delivery</h4>
-              <p>Free delivery by courier service within 1‑2 working days</p>
-            </div>
-          </li>
-          <li>
-            <div class="txt">
-              <h4>Payment upon receipt</h4>
-              <p>
-                We do not accept prepayments. Payment is made only upon receipt
-                of the order.
-              </p>
-            </div>
-          </li>
-          <li>
-            <div class="txt">
-              <h4>Guarantees</h4>
-              <p>
-                We always check the product before shipping and guarantee 100%
-                quality.
-              </p>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <!--/order-info-->
-      <!--offer-->
-      <section class="offer">
-        <div class="head gradient">
-          <div class="main-title">
-            <span> Cooling cover for car seat</span> Car Seat Cooler
-          </div>
-          <div class="sub-title">The feeling of a breeze in your car!</div>
-        </div>
-        <div class="box">
-          <div class="sale"><b>-50%</b> discount</div>
-          <div class="desc clrfix">
-            <img src="img/desc_img.jpg" alt />
-            <p>Forget about the heat, enjoy the coolness!</p>
-          </div>
-          <img src="img/offer.png" alt />
-          <div class="price clrfix">
-            <div class="old">
-              <div class="text">Old price:</div>
-              <p><span>398.00</span><i>р</i></p>
-            </div>
-            <div class="new">
-              <div class="text">Today`s price:</div>
-              <div class="number">
-                <span>199.00<i>AED</i></span>
-                <div class="economy">You save: <b> 199.00</b></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="order-form">
-          <div class="order-txt">
-            <h4>Leave a request</h4>
-            <p>Our manager will contact you to check the order details</p>
-          </div>
-          <form class="main-order-form m1-form" id="order" method="GET" action="buy.html">
-            <label for="">Example: Bisma Jamil</label>
-            <input
-              class="field"
-              type="text"
-              name="name"
-              placeholder="Enter your name"
-              required
-            />
-            <label for="">Example: +971-505-5598-80</label>
-            <input
-              class="field"
-              type="tel"
-              name="phone"
-              placeholder="Phone number"
-              required
-            />
-            <label for="">Example: emirate, street, house</label>
-            <input
-              class="field"
-              type="text"
-              name="other"
-              placeholder="Enter you address"
-              required
-            />
-            <button class="button-m" type="submit">Order now</button>
-          </form>
-          <div class="privat2">The call is absolutely free</div>
-        </div>
-      </section>
-      <!--/offer-->
-      <!--footer-->
-      <footer class="footer">
-        <p>PETREARTE PLC, 73B Lake Valley Rd, office A, Singapore 248373<br>
-          <a href="policy_en.html" target="_blank"> Privacy policy</a>
-        </p>
-      </footer>
-      <!--/footer-->
+
+</head>
+<body class="lang-ro">
+
+
+<!--header-->
+<!--header desktop-->
+<div class="header">
+    <div class="container-fluid search-header">
+        <form>
+            <input type="text" placeholder="Search">
+            <span class="close-search">X</span>
+        </form>
     </div>
-    <!--/wrap-->
+    <div class="container-fluid">
+        <div class="header-desktop ">
+            <div class=" header-menu-desktop d-flex justify-content-between">
+                <div>
+                    <div class="logo">
+                        <a href="#"><img src="img/Logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="menu">
+                        <ul>
+                            <li style="margin-right: 300px;"><a href="#">Home</a></li>
+                            <li><a class="js-scroll-to-id" href="#how_to_order">Plata si Livrare</a></li>
+                            <li><a class="js-scroll-to-id" href="#form_order">Comandă</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="header-right">
+                        <ul class="list-inline">
+                            <li><a href="javascript:void(0)" class="search-header1"><img src="img/search-header.png" alt="" style="width: 20px;height: 20px;margin-top: -10px;"></a>
+                            </li>
+                            <li><a href="javascript:void(0)" class="introduce1"><img src="img/control-introduce.png" alt="" style="width: 16px;height: 16px;margin-top: -10px;"></a>
+                            </li>
+                        </ul>
 
-    <script src="js/init.js"></script>
-    <script src="js/previewYouTube.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end header desktop-->
+<!--header mobile-->
+<div class="header">
+    <div class="container-fluid">
+        <div class="header-mobile">
+            <div class="header-menu-mobile d-flex justify-content-between">
+                <div>
+                    <button><span class="lnr lnr-menu click-mobile"></span></button>
+                </div>
+                <div class="logo">
+                    <img src="img/Logo.png" alt="">
+                </div>
+                <div>
+                    <div class="row header-right">
+                        <ul class="list-inline">
+                            <li><a href="javascript:void(0)" class="search-header1"><img src="img/search-header.png" alt="" style="width: 20px;height: 20px;margin-top: -10px;"></a>
+                            </li>
+                            <li><a href="javascript:void(0)" class="introduce1"><img src="img/control-introduce.png" alt="" style="width: 16px;height: 16px;margin-top: -10px;"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="introduce">
+            <div class="content-introduce">
+                <h3> </h3>
+                <h5><a href="#" class="close-introduce" style="color: black">Home</a></h5>
+                <h5><a href="#how_to_order" class="close-introduce js-scroll-to-id" style="color: black">Plata si Livrare</a></h5>
+                <h5><a href="#form_order" class="close-introduce js-scroll-to-id" style="color: black">Comandă</a></h5>
+                <span class="lnr lnr-cross close-introduce">X</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end header mobile-->
+<!--end header-->
+
+<!--product detail-->
+<div class="container">
+    <div class="product-single-detail">
+        <div class="row product_detail">
+            <div class="col-md-6 col-sm-12 col-12">
+                <div id="slider" class="flexslider">
+                        <img width="100%" src="img/product_detail.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-12 content-product">
+                <h2>"Cosmo Vita" Vitamin Serum</h2>
+                <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> &nbsp; (158 Recenzii)</p>
+                <p style="font-size: 24px">179 Ron <span style="text-decoration: line-through; font-size:22px;color:#bd6b6b;">250 Ron</span> (30% reducere)</p>
+                
+                <p>Ser cu efect anti-imbatranire, anti-acnee, combate ridurile, petele de soare, cearcanele, hidrateaza si hraneste pielea.</p>
+                <div>
+                    <div class="btn-group">
+                        
+                        <a href="#form_order" class="btn add-to-cart js-scroll-to-id">Comandă<p><i class="fas fa-cart-plus"></i></p> </a>
+                    </div>
+                </div>
+                <div class="information">
+                    <div class="section_title">Descriere</div>
+                    <p>Serumul de hidratare "Cosmo Vita" este un concentrat de agenți activi care acționează în profunzime datorită celor trei ingrediente majore: Extract de alge marine brune, Concentrated seawater și Organic orange water.</p>
+                    <div class="text_info">Ser concentrat ideal pentru toate tipurile de ten, in mod special pentru tenul deshidratat, lipsit de stralucire. Ser facial indispensabil pentru productia de colagen, aceasta formula avansata a fost conceputa pentru a viza cele mai frecvente semne de imbatranire, inclusiv luminozitatea, fermitatea, liniile fine, ridurile, petele intunecate si petele solare. 
+                    <br>
+                    Se absoarbe usor in piele, fara a lasa o pelicula grasa. 
+                    </div>
+				</div>
+                <div class="information">
+                    <div class="section_title">Ingrediente active</div>
+                    <div class="text_info">Extract de alge marine brune (Undaria pinnatifida), Concentrated seawater, Organic orange water
+                    </div>
+                    <br>
+
+                    <div class="text_info">
+                        
+                        <button class="collapsible">Toate ingredientele</button>
+                        <div class="content">
+                            <p>Aqua (Water / Eau), Citrus Aurantium Dulcis Flower Water, Glycerin, Parfum (Fragrance), Chondrus Crispus (Carrageenan), Caprylic/Capric Triglyceride, Benzyl Alcohol, Xanthan Gum, Maris Sal (Sea Salt/Sel Marin), Dehydroacetic Acid, Linalool, Undaria Pinnatifida Extract, Geraniol, Citronellol, Limonene, Citral</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+<!--end product detail-->
 
 
-  </body>
+
+
+
+<div class="about problems">
+    <div class="container">
+        <h2 style="text-align: center;margin-bottom: 50px;">Soluționează cele șase probleme majore ale pielii</h2>
+
+        <div class="row inner-about">
+            <div class="col-lg-4  col-sm-6 content-inner-about-center">
+                <img src="img/1.png" alt="">
+                <figcaption>Piele uscată deshidratată</figcaption>
+            </div>
+            <div class="col-lg-4  col-sm-6 content-inner-about-center">
+                <img src="img/2.png" alt="">
+                <figcaption>Iritație a pielii</figcaption>
+            </div>
+            <div class="col-lg-4  col-sm-6 content-inner-about-center">
+                <img src="img/3.png" alt="">
+                <figcaption>Puncte negre</figcaption>
+            </div>
+        </div>
+
+        <div class="row inner-about" style="margin-top: 50px;">
+            <div class="col-lg-4  col-sm-4 col-12 content-inner-about-center">
+                <img src="img/4.png" alt="">
+                <figcaption>Acnee și coșuri</figcaption>
+            </div>
+            <div class="col-lg-4  col-sm-4 content-inner-about-center">
+                <img src="img/5.png" alt="">
+                <figcaption>Riduri și linii fine</figcaption>
+            </div>
+            <div class="col-lg-4  col-sm-4  content-inner-about-center">
+                <img src="img/6.png" alt="">
+                <figcaption>Pungi de sub ochi</figcaption>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="about problems-mobile">
+    <div class="container">
+        <h2 style="text-align: center;margin-bottom: 50px;">Soluționează cele șase probleme majore ale pielii</h2>
+
+        <div class="row inner-about">
+            <div class="col-6 content-inner-about-center">
+                <img src="img/1.png" alt="">
+                <figcaption>Piele uscată deshidratată</figcaption>
+            </div>
+            <div class="col-6 content-inner-about-center">
+                <img src="img/2.png" alt="">
+                <figcaption>Iritație a pielii</figcaption>
+            </div>
+            <div class="col-6 content-inner-about-center">
+                <img src="img/3.png" alt="">
+                <figcaption>Puncte negre</figcaption>
+            </div>
+
+            <div class="col-6 content-inner-about-center">
+                <img src="img/4.png" alt="">
+                <figcaption>Acnee și coșuri</figcaption>
+            </div>
+            <div class="col-6 content-inner-about-center">
+                <img src="img/5.png" alt="">
+                <figcaption>Riduri și linii fine</figcaption>
+            </div>
+            <div class="col-6  content-inner-about-center">
+                <img src="img/6.png" alt="">
+                <figcaption>Pungi de sub ochi</figcaption>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="about product_info">
+    <div class="container">
+        <h2 style="text-align: center;margin-bottom: 50px;">Beneficiile Vitamin Serum "Cosmo Vita"</h2>
+        <div class="row inner-about">
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 content-inner-about-left">
+                <div class="content-item-about">
+                    <h3>Extractul de algă brună</h3>
+                    <img class="img-icon-about" src="img/icon-about1.png" alt="">
+                    <p>Aceste celule au un rol esențial ca sursă de viață a algelor și conțin molecule antioxidante. Capacitățile antioxidante ale pielii sunt consolidate și metabolismul este stimulat.</p>
+                </div>
+                <div class="content-item-about">
+                    <h3>Apă de portocale organice</h3>
+                    <img class="img-icon-about" src="img/icon-about2.png" alt="Responsive image">
+                    <p>Această apă este extrasă direct din portocale delicioase și proaspete. Compoziția bogată de vitamine și minerale distinge acest produs ca fiind un tonifiant, nutritiv și remineralizant excelent. Vitamina C prezentă într-o cantitate mai mare, este cunoscută pentru proprietățile sale antioxidante și întinerirea celulară.</p>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-0 col-sm-0 col-0 content-inner-about-center">
+                <img src="img/about.png" alt="">
+            </div>
+
+            <div class=" col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 content-inner-about-right">
+                <div class="content-item-about">
+                    <h3>Apa de mare concentrată</h3>
+                    <img class="img-icon-about" src="img/icon-about3.png" alt="">
+                    <p>Conținutul său bogat în magneziu tinde să inhibe translocarea factorului inflamator: NF-kB, ceea ce duce la scăderea reacției celulare inflamatoare. <br class="mobile_hide"><br class="mobile_hide"></p>
+                    
+                </div>
+                <div class="content-item-about">
+                    <h3>Vitamina C</h3>
+                    <img class="img-icon-about" src="img/icon-about4.png" alt="">
+                    <p>Vitamina C ajuta pielea impotriva razelor UV, previne aparitia pistruilor si a petelor de soare, estompandu-le. Vara nu permite ca pielea sa fie deteriorata de expunerea la soare, accelereaza metabolismul si scade productia de melanina.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="container">
+    <div class="product-single-detail">
+        <div class="row product_detail reviews_sect">
+            <div class="col-sm-12 col-12 content-product">
+              <div class="information">
+                                <div class="section_title">Recenzii</div>
+                                <div class="woocommerce-Reviews" id="reviews">
+                                    <div id="comments"> 
+                                        <div class="comment-list">
+                                            <div class="comment-item">
+                                                <div class="comment-content">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="img/item-coment-blog-single3.jpg" alt="customer">
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="comment-body">
+                                                                <div class="comment-author">
+                                                                    <span class="author">Maria</span>
+                                                                    <div class="star-rating">
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <span class="comment-time"> </span>
+                                                                <p>De la prima folosire s-a văzut diferența. Cu fiecare folosire tenul este mai uniform și mai luminos iar ridurile fine au început sa se estompeze. Merita! </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="comment-item">
+                                                <div class="comment-content">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="img/item-coment-blog-single3.jpg" alt="customer">
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="comment-body">
+                                                                <div class="comment-author">
+                                                                    <span class="author">Liliana</span>
+                                                                    <div class="star-rating">
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <span class="comment-time"> </span>
+                                                                
+                                                                <p>Il recomand pentru riduri superficiale si luminozitate, pentru mine personal a functionat deja dupa primele aplicari. Daca folositi o crema hidratanta si usoara dupa plus o curatare a tenului in prealabil va avea rezultate.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="comment-item">
+                                                <div class="comment-content">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="img/item-coment-blog-single3.jpg" alt="customer">
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="comment-body">
+                                                                <div class="comment-author">
+                                                                    <span class="author">Angela</span>
+                                                                    <div class="star-rating">
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <span class="comment-time"> </span>
+                                                                
+                                                                <p>Excelent ser, e minunat folosit seara, la fiecare 2 zile! Tenul devine IMPECABIL! Fara pete, fin, hidratat, si desi e uleios serul, acesta in maxim 3 minute intra in piele! E primul ser care intr-adevar functioneaza!</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="comment-item">
+                                                <div class="comment-content">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="img/item-coment-blog-single3.jpg" alt="customer">
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="comment-body">
+                                                                <div class="comment-author">
+                                                                    <span class="author">Adelina</span>
+                                                                    <div class="star-rating">
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <span class="comment-time"> </span>
+                                                                
+                                                                <p>Foarte hidratant, intra foarte repede in piele si rezultate se vad foarte repede. Aduce luminozitate tenului, reduce textura si ii ofera un aspect de lift. Foarte foarte bun si la pret!! Este pentru toate tipurile de ten si daca ar fi sa aruncati toate cremele de fata pe care le aveti in baie si sa va axati doar pe acest produs, va incurajez sa faceti asta!! Este tot ce aveti nevoie!!</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="comment-item">
+                                                <div class="comment-content">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="img/item-coment-blog-single3.jpg" alt="customer">
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="comment-body">
+                                                                <div class="comment-author">
+                                                                    <span class="author">Alexandra</span>
+                                                                    <div class="star-rating">
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <span class="comment-time"> </span>
+                                                                
+                                                                <p>Un produs excelent. Hidrateaza perfect, nu are parfum si nu irita pielea. Rezultatele se vad chiar de a doua zi. Poate fi folosit si seara, dar si ziua, in locul cremei obisnuite. Pretul se justifica. Nu as alege altceva!</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="comment-item">
+                                                <div class="comment-content">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="img/item-coment-blog-single3.jpg" alt="customer">
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="comment-body">
+                                                                <div class="comment-author">
+                                                                    <span class="author">Dorina</span>
+                                                                    <div class="star-rating">
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <span class="comment-time"> </span>
+                                                                
+                                                                <p>Citisem despre el pe reddit si acum la doua luni de folosire aproape zilnica pot sa confirm ca merita... Tenul meu e transformat, nu se mai vad urmele cosurilor care in mod normal imi treceau in mai mult de sase luni. Imi ofera si suficienta hidratare incat nu mai am nevoie de alta crema (decat cea cu spf daca ies afara in soare). In plus, am mai observat un efect la care nu ma asteptam, nu mi-au mai aparut cosuri din acelea adanci, sub piele, de cand il folosesc.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="comment-item">
+                                                <div class="comment-content">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="img/item-coment-blog-single3.jpg" alt="customer">
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="comment-body">
+                                                                <div class="comment-author">
+                                                                    <span class="author">Elena</span>
+                                                                    <div class="star-rating">
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <span class="comment-time"> </span>
+                                                                
+                                                                <p>Ok…recunosc că nu mă așteptam la multe. WOW, am fost surprinsă. Îl folosesc zilnic timp de aproximativ o lună sau cam așa ceva, iar diferența este FOARTE vizibilă.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="comment-item">
+                                                <div class="comment-content">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="img/item-coment-blog-single3.jpg" alt="customer">
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="comment-body">
+                                                                <div class="comment-author">
+                                                                    <span class="author">Tatiana</span>
+                                                                    <div class="star-rating">
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <span class="comment-time"> </span>
+                                                                <p>Nu știu cum să explic ce face pielii mele, dar când îl aplic pe timp de noapte și mă trezesc dimineața pielea mea se simte uimitor, nu-mi venea să cred. Îl aplic pe timp de noapte în această ordine: toner, ser, cremă hidratantă. Mi-a ajutat mult pielea și cred că chiar îmi luminează tenul! De asemenea, este bine de utilizat și înainte de aplicarea machiajului, dar eu îndeosebi îl folosesc înainte de a merge la culcare. Dacă vă interesează un astfel de tip de ser, acesta este unul pe care îl recomand cu încredere!</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="comment-item">
+                                                <div class="comment-content">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <img src="img/item-coment-blog-single3.jpg" alt="customer">
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="comment-body">
+                                                                <div class="comment-author">
+                                                                    <span class="author">Natalia</span>
+                                                                    <div class="star-rating">
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <span class="comment-time"> </span>
+                                                                <p>Eu îl utilizez ca parte a rutinei mele de curățare facială zilnică și e într-adevăr o diferență uriașă și un plus minunat! Planific să comand câteva sticle pentru a le avea pregătite, așa cum fac și cu celelalte produse, astfel încât să nu rămân niciodată fără acestea. Mi-a luminat în totalitate tenul pielii, mi-a îmbunătățit textura, mi-a redus liniile fine (am 35 de ani, arăt puțin mai tânăr decât sunt, dar am văzut o îmbunătățire), mi-a diminuat câteva pete mici cauzate de soare și mi-a îmbunătățit hidratarea pielii. Și a trecut doar o săptămână! Prețul este excelent, deci este și un bonus URIAȘ, de altfel! L-am recomandat deja la câțiva membri ai familiei.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn" id="next_cmnt">Afișați mai multe</button>
+
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="velaServices" id="how_to_order">
+    <div class="container">
+        <div class="velaServicesInner">
+            <div class="velaContent">
+                <div class="rowFlex rowFlexMargin flexJustifyCenter">
+                    <div class="col-xs-12 col-sm-4" style="padding-bottom: 15px;">
+                        <div class="boxService mbItemGutter text-center">
+                            <div class="boxServiceImage">
+                                <i class="pe-7s-world how_to_1">
+                                </i>
+                            </div>
+                            <div class="boxServiceContent">
+                                <h4 class="boxServiceTitle">Îndepliniți formularul de comandă de pe site</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4" style="padding-bottom: 15px;">
+                        <div class="boxService mbItemGutter text-center">
+                            <div class="boxServiceImage">
+                                <i class="pe-7s-headphones how_to_2">
+                                </i>
+                            </div>
+                            <div class="boxServiceContent">
+                                <h4 class="boxServiceTitle">Managerul nostru vă va telefona în câteva minute</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4" style="padding-bottom: 15px;">
+                        <div class="boxService mbItemGutter text-center">
+                            <div class="boxServiceImage">
+                                <i class="pe-7s-refresh-2 how_to_3">
+                                </i>
+                            </div>
+                            <div class="boxServiceContent">
+                                <h4 class="boxServiceTitle">Plata se face după primirea comenzii.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="product-single-detail">
+        <div class="row product_detail">
+            <div class="col-md-6 col-sm-12 col-12">
+                <img width="100%" style="margin-bottom: 20px;" src="img/product_detail.jpg" alt="">
+            </div>
+            <div class="col-md-6 col-sm-12 col-12 content-product">
+                <h2>"Cosmo Vita" Vitamin Serum</h2>
+                <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> &nbsp; (158 Recenzii)</p>
+                <p style="font-size: 24px">179 Ron <span style="text-decoration: line-through; font-size:22px;color:#bd6b6b;">250 Ron</span> (30% reducere) </p>
+                <p>Ser cu efect anti-imbatranire, anti-acnee, combate ridurile, petele de soare, cearcanele, hidrateaza si hraneste pielea.</p>
+                <hr>
+                <form class="row content-blog" id="form_order" action="" method="POST">
+                    <div class="col-md-9">
+                        <div class="content-blog-right">
+                            <div class="post-comment">
+                                <h5></h5>
+                                <p style="color: grey">Managerul nostru vă va telefona în cel mai scurt timp pentru a confirma datele.</p>
+                                <label for="">De exemplu: Ion Petrescu</label>
+                                <input type="text" name="name" placeholder="Introduceți numele *" required>
+                                <label for="">De exemplu: +40 0123456789</label>
+                                <input type="tel" name="phone" placeholder="Introduceți telefonul *" required>
+                                <input class="btn" value="Comandă" type="submit">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<footer class="footer-section align-center">
+        <div class="footer_block align-center">
+            <div>
+                <a href="policy_ro.html" target="_blank">Politici și condiții</a>
+            </div>
+          </div>
+          <br>
+          <div class="container">
+                <p>ST. GERARDE LTD, PO Box 832, Orion Mall, Palm Street, Victoria, Mahé, Seychelles</p>
+            </div>
+      </footer>
+
+
+    
+
+<style>
+    .feedback {
+        width: 75px;
+        height: 70px;
+        position: fixed;
+        right: -15px;
+        top: 15%;
+        display: flex;
+        align-items: center;
+        background-color: #ffc000;;
+        padding-left: 10px;
+        border-top-left-radius: 35px;
+        border-bottom-left-radius: 35px;
+        cursor: pointer;
+        z-index: 1000;
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+        transition: all .5s;
+    }
+
+    .feedback:hover {
+        right: 0;
+    }
+
+    .feedback img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .popup-window {
+        font-family: inherit;
+        display: none;
+        width: 300px;
+        position: fixed;
+        right: 0;
+        top: 15%;
+        padding: 35px 10px;
+        background: #fff;
+        border-radius: 5px;
+        z-index: 2000;
+    }
+
+    .popup-window form {
+        width: 100%;
+        min-height: auto;
+        padding: 0;
+        background: inherit;
+        box-shadow: none;
+    }
+
+    .popup-window label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #333;
+        text-transform: uppercase;
+    }
+
+    .popup-window input {
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: none;
+        font-family: inherit;
+        font-size: 16px;
+        margin-bottom: 15px;
+        border: 1px solid #333;
+    }
+
+    .popup-window button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: #ffc000;
+        color: #000;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 15px;
+        border-radius: 20px;
+    }
+
+    .close-popup {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        width: 27px;
+        height: 27px;
+        background-color: #fff;
+        cursor: pointer;
+    }
+
+    .close-popup:before {
+        content: "";
+        background: #333;
+        width: 20px;
+        height: 1px;
+        position: absolute;
+        top: 13px;
+        left: 4px;
+        transform: rotate(-45deg);
+    }
+
+    .close-popup:after {
+        content: "";
+        background: #333;
+        width: 20px;
+        height: 1px;
+        position: absolute;
+        top: 13px;
+        left: 4px;
+        transform: rotate(45deg);
+    }
+
+.text_info .collapsible {
+    background-color: #fff;
+    color: #666666;
+    border: none;
+    padding: 0;
+}
+ 
+.text_info .collapsible:after {
+    font-family: FontAwesome;
+  content: "\f150";
+    color: #666666;
+  float: right;
+  margin-left: 5px;
+}
+
+.text_info .active:after {
+  font-family: FontAwesome;
+  content: "\f151";
+  color: #666666;
+}
+
+.text_info .content {
+    margin-top: 10px;
+  max-height: 50px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  position: relative;
+}
+.text_info .collapsible + .content:after {
+  position: absolute;
+  bottom: 0;  
+  height: 100%;
+  width: 100%;
+  content: "";
+  background: linear-gradient(to top,
+     rgba(255,255,255, 1) 0%, 
+     rgba(255,255,255, 0) 200%
+  );
+  pointer-events: none; /* so the text is still selectable */
+}
+.text_info .collapsible.active + .content:after {
+  content: "";
+  background: none;
+  pointer-events: none; /* so the text is still selectable */
+}
+</style>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+    content.style.maxHeight = null;
+    } else {
+    content.style.maxHeight = content.scrollHeight + "px";
+    } 
+});
+}
+</script>
+
+<!--END ingrediente -->
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
 </html>
