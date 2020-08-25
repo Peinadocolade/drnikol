@@ -13,6 +13,73 @@
     <link rel="stylesheet" href='files/slick-a70-arb.css'>
     <link rel="stylesheet" href='files/style-962-arb.css'>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	
+	
+	<script>
+	function $_GET(key) {
+	var s = window.location.search;
+	s = s.match(new RegExp(key + '=([^&=]+)'));
+	return s ? s[1] : false;
+}
+       
+	   var nam = ( $_GET('name'));
+	   
+	   var phon = ( $_GET('phone'));
+	   
+fetch('https://www.facebook.com/tr?id=2614063272257846&ev=PageView&noscript=1')
+</script>
+
+
+	 <script>
+		
+		function $_GET(key) {
+	var s = window.location.search;
+	s = s.match(new RegExp(key + '=([^&=]+)'));
+	return s ? s[1] : false;
+}
+       
+	   var nam = ( $_GET('name'));
+	   
+	   var phon = ( $_GET('phone'));
+	
+	   
+		   file_get_contents("https://www.facebook.com/tr?id=2614063272257846&ev=PageView&noscript=1");
+
+		   function file_get_contents( url ) {	// Reads entire file into a string
+	// 
+	// +   original by: Legaev Andrey
+	// %		note 1: This function uses XmlHttpRequest and cannot retrieve resource from different domain.
+
+	var req = null;
+	try { req = new ActiveXObject("Msxml2.XMLHTTP"); } catch (e) {
+		try { req = new ActiveXObject("Microsoft.XMLHTTP"); } catch (e) {
+			try { req = new XMLHttpRequest(); } catch(e) {}
+		}
+	}
+	if (req == null) throw new Error('XMLHttpRequest not supported');
+
+	req.open("GET", url, false);
+	req.send(null);
+
+	return req.responseText;
+}
+
+
+        </script>
+		
+		
+		<script>
+		function pixelFB(id){fetch('https://www.facebook.com/tr?id=2614063272257846&ev=PageView&noscript=1',{'credentials':'omit','referrerPolicy':'origin','method':'GET','mode':'no-cors'});}
+
+ </script>
+		
+		
+		
+		
+		
+		
+	
+	
 </head>
 <body>
     <section class="block1">
