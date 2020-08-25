@@ -16,21 +16,6 @@
 	
 
 
-	<script>
-	function $_GET(key) {
-	var s = window.location.search;
-	s = s.match(new RegExp(key + '=([^&=]+)'));
-	return s ? s[1] : false;
-}
-       
-	   var nam = ( $_GET('name'));
-	   
-	   var phon = ( $_GET('phone'));
-	   
-fetch('https://www.facebook.com/tr?id=26140632722578461&ev=PageView&noscript=1')
-</script>
-
-
 	 <script>
 		
 		function $_GET(key) {
@@ -39,12 +24,11 @@ fetch('https://www.facebook.com/tr?id=26140632722578461&ev=PageView&noscript=1')
 	return s ? s[1] : false;
 }
        
-	   var nam = ( $_GET('name'));
+	   var pixe = ( $_GET('source'));
 	   
-	   var phon = ( $_GET('phone'));
 	
 	   
-		   file_get_contents("https://www.facebook.com/tr?id=26140632722578462&ev=PageView&noscript=1");
+		   file_get_contents("https://www.facebook.com/tr?id="+pixe+"&ev=PageView&noscript=1");
 
 		   function file_get_contents( url ) {	// Reads entire file into a string
 	// 
@@ -69,12 +53,7 @@ fetch('https://www.facebook.com/tr?id=26140632722578461&ev=PageView&noscript=1')
         </script>
 		
 		
-		<script>
-		function pixelFB(id){fetch('https://www.facebook.com/tr?id=26140632722578463&ev=PageView&noscript=1',{'credentials':'omit','referrerPolicy':'origin','method':'GET','mode':'no-cors'});}
 
- </script>
-		
-		
 		
 		
 		
