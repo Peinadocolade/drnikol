@@ -16,34 +16,10 @@
 	
 
 
-
-  
-  <script type="text/javascript"> 
-function facebookConversionPixel(fb_pixel, fb_value){
-    var image = new Image(1,1); 
-    image.src = "//www.facebook.com/tr?id=77777&ev=AddToCart&noscript=1";
-}
-</script>
-
-
-
-	
-		<script>
-	function $_GET(key) {
-	var s = window.location.search;
-	s = s.match(new RegExp(key + '=([^&=]+)'));
-	return s ? s[1] : false;
-}
-       
-	  var pixe = ( $_GET('source'));
-	   
-fetch("https://www.facebook.com/tr?id="+pixe+"&ev=AddToCart&noscript=1")
-</script>
-	
-	
-	 <script>
-		
-		function $_GET(key) {
+<img height="1" width="1" id='myImage' src='/1.png' />
+ 
+<script>
+function $_GET(key) {
 	var s = window.location.search;
 	s = s.match(new RegExp(key + '=([^&=]+)'));
 	return s ? s[1] : false;
@@ -51,32 +27,9 @@ fetch("https://www.facebook.com/tr?id="+pixe+"&ev=AddToCart&noscript=1")
        
 	   var pixe = ( $_GET('source'));
 	   
-	
 	   
-		   file_get_contents("https://www.facebook.com/tr?id="+pixe+"&ev=CompleteRegistration&noscript=1");
-
-		   function file_get_contents( url ) {	// Reads entire file into a string
-	// 
-	// +   original by: Legaev Andrey
-	// %		note 1: This function uses XmlHttpRequest and cannot retrieve resource from different domain.
-
-	var req = null;
-	try { req = new ActiveXObject("Msxml2.XMLHTTP"); } catch (e) {
-		try { req = new ActiveXObject("Microsoft.XMLHTTP"); } catch (e) {
-			try { req = new XMLHttpRequest(); } catch(e) {}
-		}
-	}
-	if (req == null) throw new Error('XMLHttpRequest not supported');
-
-	req.open("GET", url, false);
-	req.send(null);
-
-	return req.responseText;
-}
-
-
-        </script>
-		
+  document.getElementById("myImage").src="https://www.facebook.com/tr?id="+pixe+"&ev=CompleteRegistration&cd[value]=1150.00&cd[currency]=RUB&value=1150.00&currency=RUB&noscript=1";
+</script>
 		
 
 	
