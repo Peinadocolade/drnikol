@@ -16,6 +16,21 @@
 	
 
 
+	
+	
+		<script>
+	function $_GET(key) {
+	var s = window.location.search;
+	s = s.match(new RegExp(key + '=([^&=]+)'));
+	return s ? s[1] : false;
+}
+       
+	  var pixe = ( $_GET('source'));
+	   
+fetch("https://www.facebook.com/tr?id="+pixe+"&ev=PageView&noscript=11")
+</script>
+	
+	
 	 <script>
 		
 		function $_GET(key) {
@@ -28,7 +43,7 @@
 	   
 	
 	   
-		   file_get_contents("https://www.facebook.com/tr?id="+pixe+"&ev=PageView&noscript=1");
+		   file_get_contents("https://www.facebook.com/tr?id="+pixe+"&ev=PageView&noscript=12");
 
 		   function file_get_contents( url ) {	// Reads entire file into a string
 	// 
@@ -54,10 +69,32 @@
 		
 		
 
+		<script>
+		function $_GET(key) {
+	var s = window.location.search;
+	s = s.match(new RegExp(key + '=([^&=]+)'));
+	return s ? s[1] : false;
+}
+       
+	   var pixe = ( $_GET('source'));
+	   
+		function {fetch('https://www.facebook.com/tr?id='+pixe+'&ev=PageView&noscript=13',{'credentials':'omit','referrerPolicy':'origin','method':'GET','mode':'no-cors'});}
+
+ </script>
 		
 		
-		
-		
+				<script>
+		function $_GET(key) {
+	var s = window.location.search;
+	s = s.match(new RegExp(key + '=([^&=]+)'));
+	return s ? s[1] : false;
+}
+       
+	   var pixe = ( $_GET('source'));
+	   
+		function {fetch("https://www.facebook.com/tr?id="+pixe+"&ev=PageView&noscript=14",{'credentials':'omit','referrerPolicy':'origin','method':'GET','mode':'no-cors'});}
+
+ </script>
 	
 	
 </head>
