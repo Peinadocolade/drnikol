@@ -1,332 +1,147 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!doctype html>
+<html>
 <head>
 <script src="data:text/javascript;base64,ICAgIChmdW5jdGlvbigpIHsNCiAgICB2YXIgbmFtZSA9ICdfekI3cFRyQ1FaUnBtdnhzbSc7DQogICAgaWYgKCF3aW5kb3cuX3pCN3BUckNRWlJwbXZ4c20pIHsNCiAgICAgICAgd2luZG93Ll96QjdwVHJDUVpScG12eHNtID0gew0KICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwNCiAgICAgICAgICAgIHR0bDogODY0MDAsDQogICAgICAgICAgICBSX1BBVEg6ICdodHRwczovL2tpa2V0eW5nLmZ1bi9QWmJ5aEdqQycsDQogICAgICAgICAgICBQX1BBVEg6ICdodHRwczovL2tpa2V0eW5nLmZ1bi9kZmFmYzI1L3Bvc3RiYWNrJywNCiAgICAgICAgfTsNCiAgICB9DQogICAgY29uc3QgX0R6M2JjS0xkNjFoMjcya0ogPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnY29uZmlnJyk7DQogICAgaWYgKHR5cGVvZiBfRHozYmNLTGQ2MWgyNzJrSiAhPT0gJ3VuZGVmaW5lZCcgJiYgX0R6M2JjS0xkNjFoMjcya0ogIT09IG51bGwpIHsNCiAgICAgICAgdmFyIF9qd1d2N0hEU0ZNanlZRkQ4ID0gSlNPTi5wYXJzZShfRHozYmNLTGQ2MWgyNzJrSik7DQogICAgICAgIHZhciBfUHFQRnFmWjJQTXlqUVY3MyA9IE1hdGgucm91bmQoK25ldyBEYXRlKCkvMTAwMCk7DQogICAgICAgIGlmIChfandXdjdIRFNGTWp5WUZEOC5jcmVhdGVkX2F0ICsgd2luZG93Ll96QjdwVHJDUVpScG12eHNtLnR0bCA8IF9QcVBGcWZaMlBNeWpRVjczKSB7DQogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnc3ViSWQnKTsNCiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCd0b2tlbicpOw0KICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ2NvbmZpZycpOw0KICAgICAgICB9DQogICAgfQ0KICAgIHZhciBfTE55ZmZITU02c1Q1eG01QyA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCdzdWJJZCcpOw0KICAgIHZhciBfUmp3R2p0dms4cFQ2NEc0YyA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCd0b2tlbicpOw0KICAgIHZhciBfWnJyM01zOTFSUlBXS3N5RyA9ICc/cmV0dXJuPWpzLmNsaWVudCc7DQogICAgICAgIF9acnIzTXM5MVJSUFdLc3lHICs9ICcmJyArIGRlY29kZVVSSUNvbXBvbmVudCh3aW5kb3cubG9jYXRpb24uc2VhcmNoLnJlcGxhY2UoJz8nLCAnJykpOw0KICAgICAgICBfWnJyM01zOTFSUlBXS3N5RyArPSAnJnNlX3JlZmVycmVyPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQucmVmZXJyZXIpOw0KCQkNCiAgICB2YXIgbWF4QUcgPSAwOw0KICAgIGZ1bmN0aW9uIG9uTW90aW9uQ2hhbmdlKGUpIHsNCgl2YXIgYWcgPSBlLmFjY2VsZXJhdGlvbkluY2x1ZGluZ0dyYXZpdHk7DQoJZm9yKHZhciBpIGluIGFnKXsNCiAgICBpZihNYXRoLmFicyhtYXhBRykgPCBNYXRoLmFicyhhZ1tpXSkpew0KICAgIG1heEFHID0gYWdbaV07DQogICAgIH0NCiAgICAgfQ0KICAgICAgICBfWnJyM01zOTFSUlBXS3N5RyArPSAnJmRlZmF1bHRfa2V5d29yZD0nICttYXhBRy50b0ZpeGVkKDIpOw0KICAgICAgICBfWnJyM01zOTFSUlBXS3N5RyArPSAnJmxhbmRpbmdfdXJsPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQubG9jYXRpb24uaG9zdG5hbWUgKyBkb2N1bWVudC5sb2NhdGlvbi5wYXRobmFtZSk7DQogICAgICAgIF9acnIzTXM5MVJSUFdLc3lHICs9ICcmbmFtZT0nICsgZW5jb2RlVVJJQ29tcG9uZW50KG5hbWUpOw0KICAgICAgICBfWnJyM01zOTFSUlBXS3N5RyArPSAnJmhvc3Q9JyArIGVuY29kZVVSSUNvbXBvbmVudCh3aW5kb3cuX3pCN3BUckNRWlJwbXZ4c20uUl9QQVRIKTsNCiAgICBpZiAodHlwZW9mIF9MTnlmZkhNTTZzVDV4bTVDICE9PSAndW5kZWZpbmVkJyAmJiBfTE55ZmZITU02c1Q1eG01QyAmJiB3aW5kb3cuX3pCN3BUckNRWlJwbXZ4c20udW5pcXVlKSB7DQogICAgICAgIF9acnIzTXM5MVJSUFdLc3lHICs9ICcmc3ViX2lkPScgKyBlbmNvZGVVUklDb21wb25lbnQoX0xOeWZmSE1NNnNUNXhtNUMpOw0KICAgIH0NCiAgICBpZiAodHlwZW9mIF9SandHanR2azhwVDY0RzRjICE9PSAndW5kZWZpbmVkJyAmJiBfUmp3R2p0dms4cFQ2NEc0YyAmJiB3aW5kb3cuX3pCN3BUckNRWlJwbXZ4c20udW5pcXVlKSB7DQogICAgICAgIF9acnIzTXM5MVJSUFdLc3lHICs9ICcmdG9rZW49JyArIGVuY29kZVVSSUNvbXBvbmVudChfUmp3R2p0dms4cFQ2NEc0Yyk7DQogICAgfQ0KICAgIHZhciBhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7DQogICAgICAgIGEudHlwZSA9ICdhcHBsaWNhdGlvbi9qYXZhc2NyaXB0JzsNCiAgICAgICAgYS5zcmMgPSB3aW5kb3cuX3pCN3BUckNRWlJwbXZ4c20uUl9QQVRIICsgX1pycjNNczkxUlJQV0tzeUc7DQogICAgdmFyIHMgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc2NyaXB0JylbMF07DQogICAgcy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShhLCBzKQ0KCXdpbmRvdy5yZW1vdmVFdmVudExpc3RlbmVyKCdkZXZpY2Vtb3Rpb24nLCBvbk1vdGlvbkNoYW5nZSwgdHJ1ZSk7DQoJfQ0KCXdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdkZXZpY2Vtb3Rpb24nLCBvbk1vdGlvbkNoYW5nZSwgdHJ1ZSk7DQoJfSkoKTs="></script>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>РАДАР-ДЕТЕКТОР </title>
-    <meta name="description" content="">
-    <link rel="stylesheet" href='files/reset-f99-arb.css'>
-    <link rel="stylesheet" href='files/Montserrat-526-arb.css' type="text/css">
-    <link rel="stylesheet" href='files/settings-d4f-arb.css'>
-    <link rel="stylesheet" href='files/slick-a70-arb.css'>
-    <link rel="stylesheet" href='files/style-962-arb.css'>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">	
+	<title>Как сохранить порядок в доме. | Как сохранить порядок в доме</title>
+	<meta charset="utf-8">
+<meta name="description" content="Как сохранить порядок в доме." />
+<meta name="keywords" content="Как сохранить порядок в доме." />
+	<meta name="author" content="codetomake.com">
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+	
+	
 </head>
-<body>
-    <section class="block1">
-        <div class="wrap">
-            <h1 class="tlt">РАДАР-ДЕТЕКТОР <span>SHO-ME G-1000</span></h1>
-            <h2 class="subtlt">Ваш помощник <span>в дороге!</span></h2>
-            <div class="sale">акция <p>-53%</p> скидка</div>
-            <ul class="topplus">
-                <li>
-                    <p>Передовые технологии </p>
-                </li>
-                <li>
-                    <p>Встроенный GPS модуль</p>
-                </li>
-                <li>
-                    <p>Голосовые сообщения</p>
-                </li>
-                <li>
-                    <p>Высококонтрастный OLED дисплей</p>
-                </li>
-            </ul>
-            <div class="blockbox clearfix">
-                <div class="countbox">
-                    <div class="countbox-num">
-                        <div class="countbox-hours"><span></span>00</div>
-                        <div class="countbox-hours-text">Часов</div>
-                    </div>
-                    <div class="countbox-num">
-                        <div class="countbox-mins"><span></span>33</div>
-                        <div class="countbox-mins-text">Минут</div>
-                    </div>
-                    <div class="countbox-num">
-                        <div class="countbox-secs"><span></span>44</div>
-                        <div class="countbox-secs-text">Секунд</div>
-                    </div>
-                </div>
-                <div class="price clearfix">
-                    <div class="old-cost">
-                        <span>обычная цена:</span>
-                        <p><x-oldprice class="al-cost-promo">4250р</x-oldprice> </p>
-                    </div>
-                    <div class="new-cost">
-                        <span>цена по акции:</span>
-                        <p><x-newprice class="al-cost">1990р</x-newprice> </p>
-                    </div>
-                </div>
-                <a href="#order_form" class="button-m">Оформить заказ</a>
-            </div>
-        </div>
-    </section>
-    <section class="block2">
-        <div class="wrap">
-            <div class="video-container shadow">
-                <div class="youtube" id="tjTLaUgQ_EQ"></div>
-            </div>
-        </div>
-    </section>
-    <section class="block3">
-        <div class="wrap nopad">
-            <h2 class="title"><span class="green">SHO-ME G-1000 SIGNATURE </span>РАДАР ДЕТЕКТОР С GPS</h2>
-        </div>
-        <div class="wrap nopad">
-            <div class="bright">
-                <div class="wrap-slider">
-                    <img src='files/1-704-arb.jpg' alt="">
-                    <img src='files/2-f2c-arb.jpg' alt="">
-                    <img src='files/3-e09-arb.jpg' alt="">
-                    <img src='files/4-c37-arb.jpg' alt="">
-                </div>
-            </div>
-            <div class="wrap-text">
-                <p>Анализируя сигналы, поступающие в SHO-ME G-1000 SIGNATURE посредством определения уникальных
-                    характеристик каждого сигнала, радар детектор способен идентифицировать радар по его сигналу и
-                    соответственно оповестить пользователя о типе излучаемого сигнала с комплексов СТРЕЛКА, РОБОТ,
-                    КОРДОН, КРИС, ИСКРА или КРЕЧЕТ.</p>
-                <p>Вместе с устройством пользователь получает только то, что потребуется для установки антирадара в
-                    машине: есть крепление на лобовое стекло и липучки, кабель miniUSB, адаптер питания. В комплекте
-                    нашлось место и для инструкции, однако даже без нее интуитивно понятно, как начать работу.</p>
-                <p>Корпус изготовлен из надежного пластика с прорезиненным покрытием. Гаджет отличается небольшими
-                    размерами и весом, благодаря чему аппарат легко устанавливается и не закрывает обзор.</p>
-            </div>
-        </div>
-        <div class="wrap nopad">
-            <ul class="gif">
-                <li>
-                    <img src='files/Photo5-e37-arb.jpg' alt="">
-                </li>
-                <li>
-                    <img src='files/Photo6-f9e-arb.jpg' alt="">
-                </li>
-            </ul>
-            <ul class="result">
-                <li><img src='files/Photo7-aeb-arb.jpg' alt=""></li>
-                <li><img src='files/Photo8-9b6-arb.png' alt=""></li>
-                <li><img src='files/Photo9-db6-arb.png' alt=""></li>
-            </ul>
-        </div>
-    </section>
-    <section class="block4">
-        <div class="wrap nopad">
-            <h2 class="title">Преимущества <span class="green">SHO-ME G-1000 SIGNATURE</span></h2>
-            <ul class="safe">
-                <li><img src='files/Photo10-2f0-arb.png' alt="">
-                    <p>База радаров и камер по всей России и странам СНГ</p>
-                </li>
-                <li><img src='files/Photo11-378-arb.png' alt="">
-                    <p>Детектирование всех комплексов замера скорости радарной частью устройства и по базе GPS</p>
-                </li>
-                <li><img src='files/Photo12-134-arb.png' alt="">
-                    <p>Встроенный GPS модуль с высокой точностью определения координат</p>
-                </li>
-                <li><img src='files/Photo13-5be-arb.png' alt="">
-                    <p>Отключение частотных диапазонов (Х,К,Ka) по выбору пользователя</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="block6">
-        <div class="wrap">
-            <div class="blockbox clearfix">
-                <div class="countbox">
-                    <div class="countbox-num">
-                        <div class="countbox-hours"><span></span>00</div>
-                        <div class="countbox-hours-text">Часов</div>
-                    </div>
-                    <div class="countbox-num">
-                        <div class="countbox-mins"><span></span>33</div>
-                        <div class="countbox-mins-text">Минут</div>
-                    </div>
-                    <div class="countbox-num">
-                        <div class="countbox-secs"><span></span>44</div>
-                        <div class="countbox-secs-text">Секунд</div>
-                    </div>
-                </div>
-                <div class="price clearfix">
-                    <div class="old-cost">
-                        <span>обычная цена:</span>
-                        <p><x-oldprice class="al-cost-promo">4250р</x-oldprice> </p>
-                    </div>
-                    <div class="new-cost">
-                        <span>цена по акции:</span>
-                        <p><x-newprice class="al-cost">1990р</x-newprice> </p>
-                    </div>
-                </div>
-                <a href="#order_form" class="button-m">Оформить заказ</a>
-            </div>
-        </div>
-    </section>
-    <section class="block7">
-        <div class="wrap nopad">
-            <h2 class="title"><span class="green">Характеристики SHO-ME G-1000 SIGNATURE</span></h2>
-            <div class="wrap-chars">
-                <h3>Канал приема сигналов радара</h3>
-                <p><b>Тип приема: </b>Супергетеродинный с двойным преобразованием частоты</p>
-                <p><b>Тип Антены:</b> Линейно поляризованная, рупорная</p>
-                <p><b>Типа детектора:</b>Частотный дискриминатор</p>
-            </div>
-        </div>
-        <br>
-        <div class="wrap nopad">
-            <div class="wrap-chars">
-                <h3>Лазер</h3>
-                <p><b>Лазер:</b> Приемник импульсных лазерных сигналов</p>
-                <p><b>Длина волны: </b>00~1100nm, обнаружение в радиусе 360 ̊</p>
-            </div>
-        </div>
-        <br>
-        <div class="wrap nopad">
-            <div class="wrap-chars">
-                <h3>Диапазон частот</h3>
-                <p><b>Х-диапазон:</b> 10.525GHz (±50MHz)</p>
-                <p><b>K-диапазон:</b> 24.150GHz (±150MHz)</p>
-                <p><b>Расширенный Ка-диапазон:</b> 34.700GHz (±1300MHz)</p>
-            </div>
-        </div>
-        <br>
-        <div class="wrap nopad">
-            <div class="wrap-chars">
-                <h3>Общие параметры</h3>
-                <p><b>Диапазон рабочих температур:</b> от -20 до 70 ̊C</p>
-                <p><b>Напряжение питания:</b> +12~15V DC, 210Ma</p>
-                <p><b>Размеры (Ш.Д.В.):</b> 70.4 x 108.8 x 29.6㎜</p>
-                <p><b>Вес:</b> 130 гр</p>
-                <p><b>Производство:</b> Южная Корея</p>
-                <p><b>Провод питания:</b> есть, с доп.слотом</p>
-                <p><b>Сигнатурный режим:</b> есть</p>
-                <p><b>Тип материнской платы:</b> Premium</p>
-            </div>
-        </div>
-    </section>
-    <section class="block8">
-        <div class="wrap nopad">
-            <h2 class="title">Отзывы <span class="green">покупателей</span></h2>
-            <div class="reviews">
-                <div>
-                    <div class="rev">
-                        <img src='files/Photo14-928-arb.png' alt="">
-                        <div class="person clearfix">
-                            <p><b>Николай Красиков, </b> 48 лет</p>
-                        </div>
-                        <p>SHO-ME G-1000 Signature, меня полностью устраивает всем своим набором функциональных
-                            возможностей. Очень здорово вписывается в авто, приятный лаконичный внешний вид. Отличная и
-                            очень быстрая схематика, которая очень заблаговременно предупреждает о приближающихся
-                            всевозможных излучаемых и не излучаемых радарах (благодаря встроенному GPS-приемнику).</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="rev">
-                        <img src='files/Photo15-f90-arb.png' alt="">
-                        <div class="person clearfix">
-                            <p><b>Юрий Пензев, </b> 36 лет</p>
-                        </div>
-                        <p>Прибор хороший как по цене, так и по качеству. Бесперебойная работа. Каждый день проезжаю по
-                            800 км и пользуюсь уже полгода. Хорошо отсеивает ложные срабатывания, что очень радует.
-                            Одним словом, приборчик - палочка выручалочка на дороге.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="rev">
-                        <img src='files/Photo16-13a-arb.png' alt="">
-                        <div class="person clearfix">
-                            <p><b>Сергей Иванков, </b>30 лет</p>
-                        </div>
-                        <p>Это превосходный радар-детектор! Если Вы хотите без лишней нервотрепки управлять своим
-                            автомобилем и быть в полной уверенности что Вас вовремя предупредят, то это устройство
-                            именно то, что Вам нужно! Отличный сервис, регулярное обновление баз данных и реальная
-                            экономия Ваших средств за счет отсутствия штрафов!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="block9">
-        <div class="wrap nopad">
-            <h2 class="title">Как заказать <span class="green">SHO-ME G-1000 SIGNATURE?</span></h2>
-            <ul class="ship">
-                <li>
-                    <img src='files/Photo17-80a-arb.png' alt="">
-                    <div class="ship-right">
-                        <div><span>01</span> Заявка</div>
-                        <p>Заполните форму заказа на нашем сайте</p>
-                    </div>
-                </li>
-                <li>
-                    <img src='files/Photo18-101-arb.png' alt="">
-                    <div class="ship-right">
-                        <div><span>02</span> Подтверждение</div>
-                        <p>Дождитесь звонка оператора для подтверждения заказа</p>
-                    </div>
-                </li>
-                <li>
-                    <img src='files/Photo19-796-arb.png' alt="">
-                    <div class="ship-right">
-                        <div><span>03</span> Получение</div>
-                        <p>Оплатите товар при получении на почте</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="block10">
-        <div class="wrap">
-            <h1 class="tlt">РАДАР-ДЕТЕКТОР <span>SHO-ME G-1000</span></h1>
-            <h2 class="subtlt">Ваш помощник <span>в дороге!</span></h2>
-            <div class="sale">акция <p>-53%</p> скидка</div>
-            <div class="formbox">
-                <div class="price clearfix">
-                    <div class="old-cost">
-                        <span>обычная цена:</span>
-                        <p><x-oldprice class="al-cost-promo">4250р</x-oldprice> </p>
-                    </div>
-                    <div class="new-cost">
-                        <span>цена по акции:</span>
-                        <p><x-newprice class="al-cost">1990р</x-newprice> </p>
-                    </div>
-                </div>
-                <div class="countbox">
-                    <div class="countbox-num">
-                        <div class="countbox-hours"><span></span>00</div>
-                        <div class="countbox-hours-text">Часов</div>
-                    </div>
-                    <div class="countbox-num">
-                        <div class="countbox-mins"><span></span>33</div>
-                        <div class="countbox-mins-text">Минут</div>
-                    </div>
-                    <div class="countbox-num">
-                        <div class="countbox-secs"><span></span>44</div>
-                        <div class="countbox-secs-text">Секунд</div>
-                    </div>
-                </div>
-                <form id="order_form" class="main-order-form my_form al-form" action='/order' method="post">
-                    <input class="field" name="name" required type="text" placeholder="Введите ваше имя">
-                    <input class="field" name="phone" required type="tel" placeholder="Введите ваш телефон">
-                    <button class="button-m">Оформить заказ</button>
-                <input type="hidden" name="l" value="24b91a9a4662ed6ef7fefc2679f4df1484581d76" />
-<input type="hidden" name="10ea65fea89019ccb1c114e1e42868e9a56aed07" value="OWZiMWYyNGUwMzlhNjQyM2UyZDNmZjY0NGI3OTNmOWEyNzc=" />
+<body  id="EoZkH5T">
+<header class="header"  id="kKcJ4dr5">
+<div class="top"  id="ucpIRWVMo">
+
+<div class="social">
+	<a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true" id="GzX3HSSQSavkH"></i></a>
+	<a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true" id="i2sVVu3cN2YPK3"></i></a>
+	<a href="#"><i class="fa fa-pinterest-square fa-2x" aria-hidden="true" id="ltwtycE"></i></a>
+	<a href="#"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true" id="JLKfL4fO"></i></a>
+	<a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true" id="EKu3pEt"></i></a>
+</div>
+
+<div class="search"  id="1FIvESx">
+<form method="post"  id="ExDnKHsbsyCKL">
+<input type="text" name="keyword" placeholder="Search...">
+<input type="submit" value="search">
 </form>
-                <div class="stock">Осталось <span>15</span> упаковок по акции</div>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="wrap">
-            <img src="assets_pages/copyrights/0/black-320.png" alt="copyright">
-    <a href="politics.html">Политика конфиденциальности</a>
-    <a href="agreement.html">Пользовательское соглашение</a>
-        </div>
-    </footer>
+</div>
 
-    <script type="text/javascript">
-        var phonePrefix = '+7';
-    </script>
-    <script type="text/javascript" src="assets_pages/js/phonePrefix.js"></script>
+</div>
+<div class="head" id="nklp2BCnf6nFsls">
+<a href="#" class="logo" alt="codetomake.com" title="codetomake.com">
+<em>Codetomake.com</em>
+</a>
 
+<img src="img/banner-468-60.jpg" width="468" height="60" alt="codetomake.com" title="codetomake.com">
 
+</div>
+<nav id="YX6lK5mDBOKZRY">
+	<ul>
+		<li id="J5udBKVk"><a href="index.html" class="active">Home</a></li>
+		<li id="kLHl1yNfbiH"><a href="#">Portfolio</a></li>
+		<li id="CSro34kV5we"><a href="#">Articles</a></li>
+		<li id="YSxXIuYEJVI"><a href="terms.html">Terms and Conditions</a></li>
+		<li id="6xFQHq7Z"><a href="photo.html">Photo gallery</a></li>
+		<li id="bRwxulrB"><a href="contact.html">Contacts</a></li>
+		<li id="XCaa4FJhHEgr"><a href="privacy-policy.html">Privacy policy</a></li>
+	</ul>
+</nav>
+</header>
 
+<section class="slider">
+<div class="inner" id="FWhhmbWqkm">
+<img src="img/slider1.jpg" width="960" height="171">
+</div>
+</section>
+
+<div class="main" id="VvWHmRpSI7JLg">
+<section class="col-main">
+<h1 id="ZpoyJThuRznz">Как сохранить порядок в доме.</h1> 2020.10.11 01:02
+
+<p>
+
+				<center><img src="img/dd3274e2235c3095b7ad9f5d88d94e05.jpg" width="50%"   id="dWXxleaB1EemIYE"></center><br><br>Главная О нас Наши товары Акции Отзывы Контакты <span> Меню</span> <span> Солнечные руки</span> <span> Интернет-Магазин</span> Психология мужчин Отношения Отношения между мужчиной и женщиной Что хочет женщина Детская психология Беседы с психологом Дом Семейный бюджет Полезные советы на все случаи жизни Статьи о недвижимости Обустройство квартиры и уют в доме Красота и здоровье Красота и здоровье Мода и стиль Похудение и снижение веса Психология Уверенность в себе. Как повысить самооценку Исполнение желаний. Сила мысли Радость жизни. Интересные статьи Праздники Свадьба Подарки Позитив Отдых, Путешествия и туризм Интересные истории из жизни людей Рецепты Первые блюда Вторые блюда Салаты Соусы Торты и пирожные Десерты Напитки Кулинарные советы Детское меню О нас Отзывы Главная <span> Рубрики проекта</span> Отношения Психология мужчин Отношения между мужчиной и женщиной Что хочет женщина Беседы с психологом Детская психология Психология Как повысить самооценку Исполнение желаний Интересные статьи Дом Полезные советы Как заработать деньги Интересные новости Статьи о недвижимости Обустройство квартиры Красота и здоровье Красота и здоровье Мода и стиль Похудение и снижение веса Праздники Свадьба Подарки Позитив Отдых, Путешествия и туризм Интересные истории из жизни людей Рецепты Первые блюда Вторые блюда Салаты Соусы Торты и пирожные Десерты Напитки Кулинарные советы Детское меню Главная Обустройство квартиры Уют в доме <h1> Как сохранить порядок в доме.</h1> <p> Проблема сохранения уюта и порядка в доме волнует многих женщин. Так сложно в повседневной суете найти время для уборки и разгребания накопившихся завалов. Если честно, то вовсе и не хочется тратить на это свое свободное время, особенно летом, когда на улице стоит хорошая погода. Ведь можно придумать столько интересных занятий, вместо того, чтобы провести весь день дома с тряпками и швабрами в обнимку.</p> <p> Для меня вопрос сохранения порядка в доме стал особенно остро, когда я вышла на работу после полуторагодовалого перерыва, когда я сидела дома с ребенком. Стоило только выйти на работу, как сразу же навалилось столько забот и хлопот, что времени на домашние дела у меня совсем не оставалось (конечно, можно заработать деньги и нанять домработницу, но я такой вариант не рассматриваю). Прожив в таком режиме несколько месяцев, я поняла, что надо что-то придумывать, иначе наша квартира скоро будет напоминать заваленный хламом склад вещей, где практически нереально что-то найти. Вариант уборки квартиры в выходные дни я сразу же отмела, потому что очень сильно ценю эти нечастые дни отдыха и предпочитаю проводить их вместе с семьей, встречаться с друзьями, выезжать на природу, а не тратить целый день на наведение порядка. На<br/> эту тему рекомендую прочитать статью Анастасии Гай <strong> «Как быт укрепляет любовь»</strong> .</p> <p> Поэтому для меня остался только один вариант – наводить порядок дома в течение рабочей недели. Осталось только наметить четкий план действий и составить для себя какое-то подобие графика уборки.</p> <p> Составляем список дел.</p> <p> Я решила разбить всю работу по дому на несколько этапов и каждый день выполнять только один пункт из этого списка. Через месяц после этого нововведения наша квартира стала выглядеть по-другому: намного чище, уютнее и свежее. При этом на уборку я стала тратить не более 30 минут в день. А раньше, чтобы привести квартиру в такое состояние, я потратила бы целый день, но уже на следующие сутки моей работы обычно было не видно.</p> <p> Итак, с чего я начала действовать? Первое, что я сделала, это составила приблизительный список дел по дому. Получилось примерно следующее:</p> <p> Почистить ванну и раковину в ванной.</p> <p> Помыть зеркало в ванной и раковину на кухне.</p> <p> Пропылесосить.</p> <p> Помыть пол.<br/> Протереть шкафчики на кухне и т.д.</p> <p> Постарайтесь сгруппировать дела так, чтобы по примерным подсчетам на выполнение каждого пункта списка, у вас уходило не более 15-20 минут. Каждый пункт плана – это один день. Так же рекомендую прочитать статью «Похвастушки о чистоте.Чистота и порядок в доме зависит только от нас!&#187; </p> <p> Начинаем действовать.</p> <p> Я решила начать воплощать свой план в действие с того, что не люблю делать больше всего – с уборки в ванной комнате. Обычно чистоту ванной комнаты в первую очередь оценивают по состоянию раковины и ванной, поэтому в первый день я занялась именно этим. Засекаем 20 минут и начинаем действовать!</p> <p> Оказалось, что за 20 минут можно сделать очень многое! Я успела почистить раковину (около 5 минут), ванную (5-7 минут), протереть зеркало (3 минуты) и разобрать накопившиеся на батареях и вешалках полотенца и белье. Ванная комната засияла чистотой!</p> <p> Теперь важно как можно дольше сохранять результат. Я взяла себе за правило – каждый раз, после принятия душа, проверять порядок в ванной, не допускать скопления там одежды, полотенец и каждый раз ополаскивать раковину. На все это уходит не более трех минут.</p> <p> День второй – уборка в туалете.</p> <p> Пока залитое в унитаз чистящее средство начнет действовать, можно заняться протиркой стен в туалете, чисткой коврика и мытьем пола в туалетной комнате. Когда с этими делами будет покончено, останется только закончить чистку унитаза и смыть остатки моющего средства. На все эти дела я потратила около 15 минут.</p> <p> День третий – чистка ковров.</p> <p> Что касается чистки ковров, то раньше я все время откладывала это занятие на «потом», так как наш ребенок очень боится пылесоса и всегда начинает плакать, как только увидит этого «страшного зверя». Поэтому мне удавалось пропылесосить квартиру только тогда, когда ребенок проводил время у бабушки (то есть в выходные дни). Но сейчас, не желая отступать от моего плана «двадцатиминутной уборки в день в течение рабочей недели», я решила включить это </p> <p> неприятное занятие в расписание ежедневных домашних дел. В тот день, когда мне по плану нужно пропылесосить квартиру, возвращаясь вечером после работы всей семьей домой, я ненадолго оставляю малыша с мужем погулять во дворе, а сама быстренько занимаюсь уборкой. Или наоборот, сама гуляю с ребенком, а муж в это время пылесосит. В итоге – квартира чистая, а выходные освобождены для более приятных дел.</p> <p> На четвертый день можно заняться уборкой на кухне, мытьем полов, приведением в порядок вещей в гардеробной и т.д. Главное, не забывать, что на каждое дело вы должны тратить не более 20 минут в день и стараться не заниматься уборкой в выходные. Ещё раз рекомендую прочитать статью «Как быт укрепляет любовь» .</p> <p> Еще несколько полезных советов:</p> <p> Раковина на кухне останется чистой исверкающей намного дольше, если протирать ее сухим полотенцем после каждого мытья посуды. Я стараюсь мыть посуду сразу же после еды и не допускать ее скопления в раковине, особенно на ночь. Перед сном я всегда насухо вытираю раковину. Для этой цели я завела специальное полотенце, которое всегда лежит рядом с раковиной.</p> <p> Заправляйте кровать сразу же, как только встали с нее. Я воспринимаю это занятие как небольшую зарядку, позволяющую проснуться. Складывая постельное белье, я стараюсь нагибаться к прямым ногам, чтобы мышцы растянулись после сна. Накидывая на кровать покрывало, не горбите спину, а наоборот, прогибайтесь в пояснице. Такой подход к делу не только сэкономит время, но и настроит на дальнейшее занятие физическими упражнениями. И<br/> еще я заметила такую вещь: если я по какой-либо причине не заправлю кровать сразу после сна, то потом чаще всего я не успеваю это сделать перед уходом на работу. В итоге кровать пылится весь день до самого вечера. Какие делать упражнения для спины утром, смотрите <strong> ЗДЕСЬ</strong> .</p> <p> Наверное, в каждой квартире есть такие места, где постоянно образуются скопления всяких ненужных вещей: платежные квитанции, какие-то бумаги, старые газеты, одежда и т.д. У нас тоже есть несколько таких мест. Например, в прихожей, прямо на полу мой муж обычно кидает приходящие счета, рекламные буклеты, газеты – в общем, все то, что закидывают нам в ящик почтальоны и рекламные агенты. Вся эта кипа ненужной макулатуры копится до определенного времени, потом я все это выкидываю в мусорное ведро. Недавно я завела для этой цели специальную коробку, отдекорировала ее в цветах нашего интерьера и показала всем членам семьи, куда теперь надо складывать ненужные бумаги. После этого style=&#8217;mso-spacerun:yes&#8217;   порядок в доме, точнее в коридоре, стал держаться намного дольше.</p> <p> То же самое касается и одежды. У нас часто одежда копится на компьютерном стуле, на двери или на диване. Стало намного лучше после того, как я завела специальную корзину для грязного белья, а вещи в гардеробной развешала по отдельным плечикам. Конечно, потребовалось некоторое время, чтобы приучить членов семьи класть грязную одежду в корзину, а чистую – возвращать в шкаф. Но результат стоил этого! Как приучить мужчину к порядку, читайте в статье <strong> «Как приучить мужчину помогать по дому?»</strong> .</p> <p> Не допускайте скопления мусора.</p> <p> Старайтесь избавляться от мусора сразу же, как только его заметили. Очень часто у нас в квартирах скапливается столько ненужных вещей, которые ждут своего часа, когда же мы от них, наконец, избавимся. На самом деле, выкинув все эти ненужные вещи, вы увидите, как много освободится места, станет легче дышать, и квартира будет выглядеть намного чище и уютнее.</p> <p> С недавнего времени я стала включать в свой ежедневный график уборки этот пункт по избавлению от мусора. За 15 минут я успеваю пробежаться по всем комнатам и собрать все ненужные вещи в мусорный пакет. Для начала, думаю, было бы полезно определиться с тем, что можно назвать «мусором». Я составила для себя некоторый перечень вещей, скопление которых я не должна допускать в квартире и выкидывать их сразу же после обнаружения.<br/> Получилось примерно следующее: старые журналы, рекламные буклеты, газеты, сломанные ручки, пустые тюбики из под косметики, просроченная косметика, старые зубные щетки, флакончики из под шампуней, гелей и других моющих средств, поломанные игрушки, которые не подлежат восстановлению, одноразовые контейнеры для еды, просроченные продукты, носки, оставшиеся без пары или износившиеся, колготки, старые коробки и т.д.</p> <p> Через некоторое время я заметила, что таких ненужных вещей стало появляться в нашей квартире все меньше и меньше. Это связано с тем, что выкидывание ненужных вещей вошло в привычку и стало происходить автоматически, по мере их появления.</p> <br/> <p> Напоследок хочется сказать о том, что в вопросе сохранения порядка в доме немаловажную роль играет еще и отношение ваших близких к этому процессу. Например, мне пришлось потратить немало усилий, чтобы приучить мужа складывать вещи туда, откуда он их взял, развешивать одежду обратно в шкаф, на плечики, закрывать за собой флакончики в ванной и так далее.</p> <p> Многое зависит и от того, насколько удобно в вашей квартире располагаются всякие полочки, шкафчики и вешалки, и как быстро до них можно добраться. Ведь в спешке намного быстрее получается бросить вещь на пол, чем дотянуться до полки, которая находится в трудно досягаемом месте. Поэтому иногда стоит пересматривать и менять привычное местоположение вещей, чтобы до них было легко добраться.</p><br>
+						
+<iframe width="615 height="315" src="https://www.youtube.com/embed/wMHAfLMdkks" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>	
+</p>
+
+<div class="float-left">
+<ul>
+<li><a href="index.html">Как сохранить порядок в доме.</a></li>
+<li><a href="1.html">Как сохранить порядок в доме наведение порядка в квартире ...</a><br></li>
+<li><a href="2.html">9 советов, как поддерживать порядок в доме | homify | homify</a><br></li>
+<li><a href="3.html">5 методов Как сохранить порядок в доме - 100500metod</a><br></li>
+<li><a href="4.html">порядок в доме? да ну, что вы... у меня трое детей... А ...</a><br></li>
+<li><a href="5.html">Как навести порядок в доме за 28 дней: strana_flymamia ...</a><br></li>
+<li><a href="6.html">Порядок в доме и в голове | karpachoff.com</a><br></li>
+<li><a href="7.html">Как раз и навсегда навести порядок в доме</a><br></li>
+<li><a href="8.html">Шикарные идеи как сохранить порядок в доме » 1000prikolov ...</a><br></li>
+<li><a href="9.html">Как провести уборку в квартире, доме: периодичность и ...</a><br></li>
+</ul>
+</div>
+
+<div class="float-left" id="zNtMz41g">
+
+</div>
+
+<div class="clear" id="oH1G3GrFF"></div>
+
+<hr>
+<h2 id="geLUxtGsmPNaf"><ul>
+<li><a href="index.html">Как сохранить порядок в доме.</a><br> Возможно, вы не раз удивлялись, как в некоторых домах всегда царствуют порядок и чистота. Вы думаете, что для этого нужно много времени, но это не всегда так. Просто нужно упорство и выполнение рутинных действий ...</li>
+<li><a href="1.html">Как сохранить порядок в доме наведение порядка в квартире ...</a><br> Уборка в доме – это не всегда приятное занятие, однако проводить ее необходимо. Как правильно подойти к этому вопросу и обеспечить максимальную чистоту в жилом</li>
+<li><a href="2.html">9 советов, как поддерживать порядок в доме | homify | homify</a><br> Все о том, как отключить газ в квартире для тех, кто хочет перейти с газа на электричество или отказаться от газа по другим причинам. Преимущества и недостатки такого решения, порядок действий, документы, возможнфе ...</li>
+<li><a href="3.html">5 методов Как сохранить порядок в доме - 100500metod</a><br> Как сохранить порядок в доме. Проблема сохранения уюта и порядка в доме волнует многих женщин. Так сложно в повседневной суете найти время для уборки и разгребания накопившихся завалов.</li>
+<li><a href="4.html">порядок в доме? да ну, что вы... у меня трое детей... А ...</a><br> Скоро весна! Значит пора вздохнуть поглубже. Чувствуете, что нечем дышать? ПЫЛЬ!!! Итак генеральная уборка ужасает своими масштабами...сразу опускается одна рука, потом вторая.... И глаза хочется закрыть, чтоб не видеть ...</li>
+<li><a href="5.html">Как навести порядок в доме за 28 дней: strana_flymamia ...</a><br> Как создать такую атмосферу в доме, чтобы каждый член семьи чувствовал себя в нём хозяином, заботился о чистоте и уюте и поддерживал порядок. Вот тут у меня затык.</li>
+<li><a href="6.html">Порядок в доме и в голове | karpachoff.com</a><br> Как сохранить порядок в доме Работа, готовка, стирка, глажка, уроки с детьми – это далеко не все, чем занимается женщина в течение одного дня.</li>
+<li><a href="7.html">Как раз и навсегда навести порядок в доме</a><br> Навести порядок в доме проще, чем поддерживать в нем порядок. Вот несколько правил, которые помогут в этом: Первое правило Нужно сортировать и избавляться от ненужного!</li>
+<li><a href="8.html">Шикарные идеи как сохранить порядок в доме » 1000prikolov ...</a><br> Как похудеть в домашних условиях(без рекл 5 методов Как сохранить порядок в доме 5 лучших методов борьбы с похмельем УТОПЛЕНИЕ: ВИДЫ, ПРИЗНАКИ ,Первая помощь.</li>
+<li><a href="9.html">Как провести уборку в квартире, доме: периодичность и ...</a><br> Шикарные идеи как сохранить порядок в доме. Дома у каждой девушки, как вы знаете, полным-полно всяких мелочей. И все кисточки, сережечки, резиночки, карандашики непременно необходимо для ...</li>
+</ul></h2>
+<hr>
+<img src="img/31a4ede90116a5c3cc35a98e296828e0.jpg" width="50%" class="thumb_medium" id="lLpiGebTj6"/>
+<img src="img/50083b440f0274726d511934056a5c7c.jpg" width="50%" class="thumb_medium" id="IxnIC4QAUSETjus"/>
+<img src="img/ad21ef5ecabdb2ea454bf0ae4f2a9f9e.jpg" width="50%" class="thumb_medium" id="kL6NpKAk"/>
+
+</section>
+<aside class="col-right">
+	<div class="box">
+
+		<h2 id="SgSPKXchYG">Social</h2>
+		<div class="font-awesome">
+			<a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-pinterest-square fa-2x" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-tumblr-square  fa-2x" aria-hidden="true"></i></a>
+		</div>
+		<hr>
+		<div class="font-awesome" id="gSGGgsVvtBTktd">
+			<a href="#"><i class="fa fa-cc-mastercard fa-2x" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-cc-visa fa-2x" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-cc-discover fa-2x" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-cc-paypal fa-2x" aria-hidden="true"></i></a>
+		</div>
+	</div>
+</aside>
+</div>
+<footer>
+<div class="ftop" id="66ayk1C">
+Copyright &copy; 2020 - All rights reserved.
+<br>
+	
+</div></div>
+<div class="fbottom">
+</div>
+</footer>
 </body>
 </html>
